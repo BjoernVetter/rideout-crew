@@ -1,0 +1,24 @@
+{
+  "name": "timothy_website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.27.6",
+    "next": "^16.0.10",
+    "nodemailer": "^7.0.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-google-recaptcha": "^3.1.0",
+    "styled-components": "^6.1.17"
+  },
+  "devDependencies": {
+    "@types/grecaptcha": "^3.0.9",
+    "@types/nodemailer": "^6.4.17"
+  }
+}
