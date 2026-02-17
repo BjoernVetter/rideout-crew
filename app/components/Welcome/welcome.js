@@ -48,7 +48,7 @@ const Welcome = () => {
 
           <StyledActions>
             <StyledSocialLink
-              href="https://instagram.com/"
+              href="https://www.instagram.com/rideout.crew?igsh=MXFra2s0Z3k2cjdidg%3D%3D&utm_source=qr/"
               target="_blank"
               rel="noreferrer"
               aria-label="Instagram"
@@ -58,7 +58,7 @@ const Welcome = () => {
             </StyledSocialLink>
 
             <StyledSocialLink
-              href="https://facebook.com/"
+              href="https://www.facebook.com/people/Ride-Out/61579355470970/?mibextid=wwXIfr&rdid=Vx4COYzCvJh03BCH&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17WJR7v7bt%2F%3Fmibextid%3DwwXIfr/"
               target="_blank"
               rel="noreferrer"
               aria-label="Facebook"
@@ -68,7 +68,7 @@ const Welcome = () => {
             </StyledSocialLink>
 
             <StyledSocialLink
-              href="https://wa.me/"
+              href="https://chat.whatsapp.com/Dw69aPOJGTkG1aFSFpFDCN"
               target="_blank"
               rel="noreferrer"
               aria-label="WhatsApp"
