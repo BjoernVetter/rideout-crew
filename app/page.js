@@ -1,16 +1,13 @@
-import ContactForm from "./components/parts/ContactForm/contact-form";
-import Card from "./components/Card/Card";
-import FotoData from "./components/Card/FotoData";
+import Header from "./components/Header/Header";
 import Welcome from "./components/Welcome/welcome";
-import CookieBanner from "./components/CockieBanner/CockieBanner";
+import Footer from "./components/Footer/Footer";
 
 const Home = () => {
   return (
     <>
+      <Header />
       <Welcome />
-      <CookieBanner />
-      <Card FotoData={FotoData} />
-      <ContactForm />
+      <Footer />
     </>
   );
 };
