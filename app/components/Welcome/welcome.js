@@ -2,8 +2,11 @@
 import Image from "next/image";
 
 import {
-  StyledWelcomeSection,
-  StyledContainer,
+  StyledWelcomeWrapper,
+  StyledHero,
+  StyledHeroVideo,
+  StyledHeroOverlay,
+  StyledContent,
   StyledCard,
   StyledLogoRow,
   StyledTitle,
@@ -14,27 +17,33 @@ import {
   StyledQrBox,
   StyledQrTitle,
   StyledHint,
+  StyledSeoSection,
+  StyledSeoContainer,
+  StyledSeoTitle,
 } from "./styled-welcome";
 
 const Welcome = () => {
   return (
-    <StyledWelcomeSection>
-      <StyledContainer>
+    <StyledWelcomeWrapper>
+      {/* HERO VIDEO */}
+      <StyledHero>
+        <StyledHeroVideo autoPlay muted loop playsInline preload="metadata">
+          <source src="/videos/rideout-hero.mp4" type="video/mp4" />
+        </StyledHeroVideo>
+        <StyledHeroOverlay />
+      </StyledHero>
+
+      {/* CONTENT UNTER DEM VIDEO */}
+      <StyledContent>
+        {/* CARD (CTA) */}
         <StyledCard>
           <StyledLogoRow>
-            {/* Optional: falls du ein Logo hast, z.B. /svg/logo.svg */}
-            <Image
-              src="/logo/Logo.svg"
-              alt="RideOut Crew"
-              width={140}
-              height={60}
-            />
+            <Image src="/logo/Logo.svg" alt="RideOut Crew" width={140} height={60} />
           </StyledLogoRow>
 
-          <StyledTitle>RideOut</StyledTitle>
-          <StyledSubTitle>
-            BIKER COMMUNITY • DÜSSELDORF & UMGEBUNG
-          </StyledSubTitle>
+          <StyledTitle>Motorradgruppe Düsseldorf – RideOut Crew</StyledTitle>
+
+          <StyledSubTitle>BIKER COMMUNITY • DÜSSELDORF & UMGEBUNG</StyledSubTitle>
 
           <StyledText>
             Hier treffen sich Gleichgesinnte – egal ob 125er, Chopper, Naked,
@@ -80,47 +89,41 @@ const Welcome = () => {
 
           <StyledQrBox>
             <StyledQrTitle>QR-Code scannen & direkt beitreten</StyledQrTitle>
-
-            {/* Ersetze /Images/qr.png später durch deinen echten QR-Code */}
-            <Image
-              src="/Images/qr.png"
-              alt="QR Code"
-              width={160}
-              height={160}
-            />
-
+            <Image src="/Images/qr.png" alt="QR Code" width={160} height={160} />
             <StyledHint>Oder nutze die Buttons oben.</StyledHint>
           </StyledQrBox>
         </StyledCard>
-      </StyledContainer>
-    </StyledWelcomeSection>
+
+        {/* SEO SECTION (unter der Card) */}
+        <StyledSeoSection>
+          <StyledSeoContainer>
+            <StyledSeoTitle>Motorradgruppe Düsseldorf & Umgebung</StyledSeoTitle>
+
+            <p>
+              Die RideOut Crew ist eine Motorradgruppe aus Düsseldorf für
+              Fahrerinnen und Fahrer aus Düsseldorf, Erkrath, Mettmann und dem
+              gesamten Raum NRW. Egal ob 125er, Naked Bike, Supersportler,
+              Chopper oder Tourer,  bei uns steht die gemeinsame Leidenschaft
+              für Motorräder im Mittelpunkt.
+            </p>
+
+            <p>
+              Wir organisieren regelmäßige Ausfahrten rund um Düsseldorf, fahren
+              ins Bergische Land oder treffen uns spontan für Touren in der
+              Region. Unsere WhatsApp-Gruppe verbindet alle Mitglieder schnell
+              und unkompliziert.
+            </p>
+
+            <p>
+              Wenn du eine aktive Motorradgruppe in Düsseldorf suchst, neue
+              Leute kennenlernen möchtest und Lust auf gemeinsame Touren hast,
+              dann bist du bei der RideOut Crew genau richtig.
+            </p>
+          </StyledSeoContainer>
+        </StyledSeoSection>
+      </StyledContent>
+    </StyledWelcomeWrapper>
   );
 };
 
 export default Welcome;
-
-// import React from "react";
-// import { StyledWelcome } from "./styled-welcome";
-
-// const Welcome = () => {
-//   return (
-//     <section id="welcome">
-//       <div className="wrapper">
-//         <StyledWelcome>
-//           <h1>Du hast gescannt!</h1>
-//           <h3>
-//             {/* jetzt bist Du dran */}
-//             jetzt bist du am zug
-//           </h3>
-
-//           <h4>
-//             Willkommen bei <strong>3promille</strong> <br />
-//             der erste Drink geht auf Dich!{" "}
-//           </h4>
-//         </StyledWelcome>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Welcome;
