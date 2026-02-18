@@ -1,15 +1,42 @@
 import styled from "styled-components";
 
 const StyledWelcomeWrapper = styled.section`
+  position: relative;
   width: 100%;
+  min-height: 100vh;
+
+  background: url("/background/background.jpg") center / cover no-repeat fixed;
+  background-color: #0b0b0b;
+
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 0;
+  }
+
+  
+  > * {
+    position: relative;
+    z-index: 1;
+  }
 `;
 
 const StyledHero = styled.div`
+  width: min(1400px, 95vw);
+  height: 33vh;
+  min-height: 500px;
+
+  margin: 22px auto 0;
   position: relative;
-  height: 100vh; /* mobile safe viewport height */
-  min-height: 520px; /* fallback */
-  width: 100%;
   overflow: hidden;
+
+  border: 5px solid rgba(255, 255, 255, 0.85);
+  border-radius: 22px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
 `;
 
 const StyledHeroVideo = styled.video`
@@ -30,42 +57,58 @@ const StyledHeroOverlay = styled.div`
 
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.15) 0%,
-    rgba(0, 0, 0, 0.35) 100%
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(0, 0, 0, 0.22) 100%
   );
 `;
 
 const StyledContent = styled.div`
-  padding: 40px 0 80px;
+  padding: 60px 0 80px;
+
+  background-image: url("/background/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    pointer-events: none;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
 `;
 
 const StyledCard = styled.div`
-  width: min(560px, 92vw);
+  width: min(900px, 92vw);
+
   margin: 0 auto;
 
   background: rgba(15, 15, 15, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 5px solid #a82222;
   border-radius: 22px;
 
   padding: 28px 22px;
   backdrop-filter: blur(10px);
 
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
-`;
-
-const StyledLogoRow = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 10px;
-  opacity: 0.95;
+  text-align: center;
 `;
 
 const StyledTitle = styled.h1`
   margin: 0;
-  font-size: clamp(26px, 3, 6vw, 44px);
+
+  font-size: clamp(26px, 6vw, 40px);
+
   line-height: 1.1;
-  letter-spacing: 0cap.4;
+
+  letter-spacing: 0.4px;
 
   overflow-wrap: anywhere;
   word-break: break-word;
@@ -101,15 +144,15 @@ const StyledSocialLink = styled.a`
   align-items: center;
   justify-content: center;
   gap: 10px;
-
-  width: 100%;
+  margin: auto;
+  width: 50%;
   padding: 14px 16px;
 
   border-radius: 16px;
   text-decoration: none;
 
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(177, 9, 9, 0.08);
+  border: 2px solid rgb(255, 255, 255);
 
   color: rgba(255, 255, 255, 0.92);
   font-size: 18px;
@@ -122,8 +165,13 @@ const StyledSocialLink = styled.a`
 
   &:hover {
     transform: translateY(-1px);
-    background: rgba(255, 255, 255, 0.12);
-    border-color: rgba(255, 255, 255, 0.22);
+    background: rgba(65, 10, 10, 0.31);
+    border-color: rgb(168, 34, 34);
+  }
+
+  img {
+    filter: invert(1);
+    opacity: 0.95;
   }
 `;
 
@@ -148,13 +196,14 @@ const StyledHint = styled.p`
 `;
 
 const StyledSeoSection = styled.section`
-  padding: 46px 0 80px;
+  padding: 50px 0 80px;
 `;
 
 const StyledSeoContainer = styled.div`
   width: min(900px, 92vw);
   margin: 0 auto;
   color: rgba(255, 255, 255, 0.9);
+  border-top: px solid rgb(255, 255, 255);
 
   p {
     margin: 14px 0 0;

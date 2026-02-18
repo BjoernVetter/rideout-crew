@@ -9,6 +9,7 @@ const FooterNavigation = () => {
         </li>
         <li>
           <a href="/datenschutz">Datenschutz</a>
+          
         </li>
       </ul>
     </nav>

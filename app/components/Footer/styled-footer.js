@@ -2,9 +2,9 @@
 import styled from "styled-components";
 
 const StyledFooter = styled.footer`
-  background-color: rgba(255, 255, 255, 0.06));
+  background-color: rgba(255, 255, 255, 0.06);
   padding: 20px 0;
-  border-top: 4px solid white;
+  
 
   .footer-content {
     display: flex;
@@ -23,16 +23,16 @@ const StyledFooter = styled.footer`
 
         a {
           transition: all 0.3s ease;
-          font-size: 16px;
+          font-size: 20px;
           display: block;
           &:hover {
-            color: orange;
+            color: rgb(168, 34, 34);;
             scale: 1.1;
           }
         }
         @media screen and (min-width: 768px) {
           flex-direction: row;
-          gap: 20px;
+          gap: 50px;
         }
       }
     }

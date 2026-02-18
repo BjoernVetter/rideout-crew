@@ -8,15 +8,11 @@ import {
   StyledHeroOverlay,
   StyledContent,
   StyledCard,
-  StyledLogoRow,
   StyledTitle,
   StyledSubTitle,
   StyledText,
   StyledActions,
   StyledSocialLink,
-  StyledQrBox,
-  StyledQrTitle,
-  StyledHint,
   StyledSeoSection,
   StyledSeoContainer,
   StyledSeoTitle,
@@ -33,26 +29,18 @@ const Welcome = () => {
         <StyledHeroOverlay />
       </StyledHero>
 
-      {/* CONTENT UNTER DEM VIDEO */}
       <StyledContent>
-        {/* CARD (CTA) */}
         <StyledCard>
-          <StyledLogoRow>
-            <Image src="/logo/Logo.svg" alt="RideOut Crew" width={140} height={60} />
-          </StyledLogoRow>
-
-          <StyledTitle>Motorradgruppe Düsseldorf – RideOut Crew</StyledTitle>
-
-          <StyledSubTitle>BIKER COMMUNITY • DÜSSELDORF & UMGEBUNG</StyledSubTitle>
+          <StyledTitle>RideOut Crew</StyledTitle>
+          {/* <StyledTitle>Motorradgruppe Düsseldorf RideOut Crew</StyledTitle> */}
+          <StyledSubTitle>
+            BIKER COMMUNITY • DÜSSELDORF & UMGEBUNG
+          </StyledSubTitle>
 
           <StyledText>
-            Hier treffen sich Gleichgesinnte – egal ob 125er, Chopper, Naked,
-            Sportler oder Tourer. Jede Maschine, jedes Alter, jeder Stil ist
-            willkommen.
+            Motorradgruppe aus Düsseldorf – offen für alle Bikes & Fahrstile.
             <br />
-            <br />
-            <strong>Unser Ziel:</strong> gemeinsame Ausfahrten, Spaß auf zwei
-            Rädern und neue Freundschaften.
+            <strong>Unser Fokus:</strong> gemeinsame Ausfahrten und gute Leute.
           </StyledText>
 
           <StyledActions>
@@ -86,38 +74,38 @@ const Welcome = () => {
               WhatsApp
             </StyledSocialLink>
           </StyledActions>
-
-          <StyledQrBox>
-            <StyledQrTitle>QR-Code scannen & direkt beitreten</StyledQrTitle>
-            <Image src="/Images/qr.png" alt="QR Code" width={160} height={160} />
-            <StyledHint>Oder nutze die Buttons oben.</StyledHint>
-          </StyledQrBox>
         </StyledCard>
 
         {/* SEO SECTION (unter der Card) */}
         <StyledSeoSection>
           <StyledSeoContainer>
-            <StyledSeoTitle>Motorradgruppe Düsseldorf & Umgebung</StyledSeoTitle>
+            <StyledSeoTitle>
+              Motorradgruppe Düsseldorf – RideOut Crew
+            </StyledSeoTitle>
 
             <p>
               Die RideOut Crew ist eine Motorradgruppe aus Düsseldorf für
-              Fahrerinnen und Fahrer aus Düsseldorf, Erkrath, Mettmann und dem
-              gesamten Raum NRW. Egal ob 125er, Naked Bike, Supersportler,
-              Chopper oder Tourer,  bei uns steht die gemeinsame Leidenschaft
-              für Motorräder im Mittelpunkt.
+              Motorradfahrerinnen und Motorradfahrer aus Düsseldorf und
+              Umgebung. Wir verbinden Menschen, die die Leidenschaft für
+              Motorräder teilen und gemeinsam unterwegs sein möchten.
             </p>
 
             <p>
-              Wir organisieren regelmäßige Ausfahrten rund um Düsseldorf, fahren
-              ins Bergische Land oder treffen uns spontan für Touren in der
-              Region. Unsere WhatsApp-Gruppe verbindet alle Mitglieder schnell
-              und unkompliziert.
+              Unsere Touren starten überwiegend im Raum Düsseldorf. Ob spontane
+              Feierabendrunde, Wochenend-Ausfahrt oder gemeinsame Treffen – bei
+              uns steht das Motorradfahren in Düsseldorf im Mittelpunkt.
+            </p>
+
+            <p>
+              Egal ob 125er, Naked Bike, Supersportler, Chopper oder Tourer –
+              jede Maschine und jeder Fahrstil ist willkommen. Wichtig ist die
+              Freude am Fahren und eine entspannte, respektvolle Community.
             </p>
 
             <p>
               Wenn du eine aktive Motorradgruppe in Düsseldorf suchst, neue
-              Leute kennenlernen möchtest und Lust auf gemeinsame Touren hast,
-              dann bist du bei der RideOut Crew genau richtig.
+              Leute kennenlernen möchtest und Lust auf gemeinsame Ausfahrten in
+              der Region hast, dann bist du bei der RideOut Crew genau richtig.
             </p>
           </StyledSeoContainer>
         </StyledSeoSection>

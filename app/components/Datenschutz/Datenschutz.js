@@ -1,25 +1,27 @@
 "use client";
 import React from "react";
-import { StyledDatenschutz } from "./styled-datenschutz";
+import {
+  StyledDatenschutzSection,
+  StyledDatenschutzContainer,
+  StyledDatenschutz,
+} from "./styled-datenschutz";
 
 const Datenschutz = () => {
   return (
-    <section id="datenschutz">
-      <div className="wrapper">
+    <StyledDatenschutzSection id="datenschutz">
+      <StyledDatenschutzContainer>
         <StyledDatenschutz>
           <h1>Datenschutzerklärung</h1>
-          <br />
-          <p>
-            Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und
-            Zweck der Verarbeitung von personenbezogenen Daten (nachfolgend kurz
-            „Daten“) innerhalb unseres Onlineangebotes und der mit ihm
-            verbundenen Webseiten, Funktionen und Inhalte auf.
-          </p>
-          <br />
-          <br />
 
-          <h2>Verantwortlicher</h2>
-          <br />
+          <h2>1. Allgemeine Hinweise</h2>
+          <p>
+            Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen.
+            Wir behandeln Ihre personenbezogenen Daten vertraulich und
+            entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser
+            Datenschutzerklärung.
+          </p>
+
+          <h2>2. Verantwortlicher</h2>
           <p>
             Björn Vetter
             <br />
@@ -27,64 +29,63 @@ const Datenschutz = () => {
             <br />
             40233 Düsseldorf
             <br />
-            fineschliffdesign@yahoo.de
+            Deutschland
+            <br />
+            E-Mail: fineschliffdesign@yahoo.de
           </p>
-          <br />
-          <br />
 
-          <h2>Erhebung und Speicherung personenbezogener Daten</h2>
-          <br />
+          <h2>3. Hosting</h2>
           <p>
-            Beim Aufrufen unserer Website werden durch den auf Ihrem Endgerät
-            zum Einsatz kommenden Browser automatisch Informationen an den
-            Server unserer Website gesendet. Diese Informationen werden temporär
-            in einem sog. Logfile gespeichert. Folgende Informationen werden
-            dabei ohne Ihr Zutun erfasst:
+            Diese Website wird bei einem externen Dienstleister (Vercel Inc.,
+            USA) gehostet. Beim Aufruf der Website werden automatisch folgende
+            Daten erfasst:
           </p>
-          <br />
-          <br />
+
           <ul>
             <li>IP-Adresse</li>
-            <li>Datum und Uhrzeit der Anfrage</li>
-            <li>Name und URL der abgerufenen Datei</li>
-            <li>Website, von der aus der Zugriff erfolgt (Referrer-URL)</li>
-            <li>
-              verwendeter Browser und ggf. das Betriebssystem Ihres Rechners
-            </li>
+            <li>Datum und Uhrzeit des Zugriffs</li>
+            <li>Browsertyp und Version</li>
+            <li>Betriebssystem</li>
+            <li>Referrer-URL</li>
           </ul>
-          <br />
-          <br />
 
-          <h2>Verwendung von Google Fonts</h2>
-          <br />
           <p>
-            Auf dieser Website werden Schriftarten lokal eingebunden, es erfolgt
-            kein externer Abruf bei Google.
+            Diese Daten dienen der technischen Bereitstellung und Sicherheit der
+            Website. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.
           </p>
-          <br />
-          <br />
 
-          <br />
+          <h2>4. Externe Links zu Social Media</h2>
           <p>
-            Die Nutzung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.
-            Wir haben ein berechtigtes Interesse daran, unsere Website vor
-            automatisierter Ausspähung und Spam zu schützen.
+            Diese Website enthält Links zu externen Plattformen (Instagram,
+            Facebook, WhatsApp). Beim Anklicken eines solchen Links verlassen
+            Sie unsere Website. Für die Datenverarbeitung auf diesen Plattformen
+            ist ausschließlich der jeweilige Anbieter verantwortlich.
           </p>
-          <br />
 
-          <br />
-
-          <h2>Ihre Rechte</h2>
-          <br />
+          <h2>5. Keine Cookies & kein Tracking</h2>
           <p>
-            Sie haben das Recht auf Auskunft über Ihre bei uns gespeicherten
-            personenbezogenen Daten, deren Herkunft, Empfänger und den Zweck der
-            Datenverarbeitung sowie ggf. ein Recht auf Berichtigung, Sperrung
-            oder Löschung dieser Daten.
+            Diese Website verwendet keine Tracking- oder Analyse-Tools. Es
+            werden keine Marketing- oder Analyse-Cookies gesetzt.
+          </p>
+
+          <h2>6. Verwendung von Schriftarten</h2>
+          <p>
+            Die auf dieser Website verwendeten Schriftarten werden lokal
+            eingebunden. Es erfolgt kein Abruf von Google Fonts oder anderen
+            externen Anbietern.
+          </p>
+
+          <h2>7. Ihre Rechte</h2>
+          <p>
+            Sie haben das Recht auf Auskunft gemäß Art. 15 DSGVO, Berichtigung
+            gemäß Art. 16 DSGVO, Löschung gemäß Art. 17 DSGVO, Einschränkung der
+            Verarbeitung gemäß Art. 18 DSGVO sowie Widerspruch gemäß Art. 21
+            DSGVO. Hierzu können Sie sich jederzeit unter der oben angegebenen
+            E-Mail-Adresse an uns wenden.
           </p>
         </StyledDatenschutz>
-      </div>
-    </section>
+      </StyledDatenschutzContainer>
+    </StyledDatenschutzSection>
   );
 };
 
