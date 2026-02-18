@@ -3,35 +3,39 @@
   --foreground: #171717;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
 
+/* =========================
+   FONTS (lokal aus /public/fonts)
+   ========================= */
 @font-face {
-  font-family: "Montserat";
-  src: url("/fonts/Montserrat-Medium") format("woff2");
-  font-weight: 400;
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Medium.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
-
 }
 
 @font-face {
   font-family: "Poppins";
   src: url("/fonts/Poppins-SemiBold.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
-
 }
 
-
-
-
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-
-  }
+/* =========================
+   BASE
+   ========================= */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html,
@@ -39,41 +43,44 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   scroll-behavior: smooth;
-
 }
 
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
   color: var(--foreground);
   background: var(--background);
-  overflow-x: hidden;
-  font-family: Comfortaa;
-  /* font-family: Arial, Helvetica, sans-serif; */
+
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  font-weight: 600;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
-section {
-  padding: 50px 0;
-}
-
-
-
+/* Überschriften: Montserrat */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-
-  font-family: luckiestGuy, sans-serif;
+  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  font-weight: 500;
 }
 
+/* OPTIONAL: wenn du bei normalem Text NICHT alles semibold willst:
+   Dann kommentier font-weight: 600 im body aus und setz hier Standard:
+p, li, a, span { font-weight: 400; }
+*/
 
+section {
+  padding: 50px 0;
+}
 
 .wrapper {
   position: relative;
@@ -83,23 +90,13 @@ h6 {
 }
 
 .fade-wrapper {
-  background-color: #FF5F1F;
+  background-color: #ff5f1f;
   min-height: 100vh;
-
-
 }
 
-
-/* verstehe ich nicht, in deiner Vorlage ist es nicht vorhanden und der Footer klebt am boden. */
+/* Footer klebt unten */
 footer {
   margin-top: auto;
-
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 nav ul li {
@@ -113,9 +110,8 @@ a {
 
 
 .text-content {
-
-  font-family: luckiestGuy;
+  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
   font-size: 1.5rem;
   text-align: center;
-
 }

@@ -5,19 +5,17 @@ const StyledWelcomeWrapper = styled.section`
   width: 100%;
   min-height: 100vh;
 
-  background: url("/background/background.jpg") center / cover no-repeat fixed;
-  background-color: #0b0b0b;
+  background: url("/background/background.jpg") center / cover no-repeat;
 
   &::before {
     content: "";
     position: fixed;
     inset: 0;
     pointer-events: none;
-    background: rgba(0, 0, 0, 0.35);
+
     z-index: 0;
   }
 
-  
   > * {
     position: relative;
     z-index: 1;
@@ -54,6 +52,7 @@ const StyledHeroOverlay = styled.div`
   position: absolute;
   inset: 0;
   z-index: 1;
+  background: red;
 
   background: linear-gradient(
     180deg,
@@ -75,7 +74,7 @@ const StyledContent = styled.div`
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45);
+    /* background: rgba(0, 0, 0, 0.45); */
     pointer-events: none;
   }
 
