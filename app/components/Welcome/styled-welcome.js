@@ -33,7 +33,7 @@ const StyledHero = styled.div`
   position: relative;
   overflow: hidden;
 
-  /* border: 5px solid rgba(255, 255, 255, 0.85); */
+  border: 2px solid rgba(255, 255, 255, 0.85);
   border-radius: 22px;
 
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
