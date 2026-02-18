@@ -32,7 +32,7 @@ const StyledFooter = styled.footer`
         }
         @media screen and (min-width: 768px) {
           flex-direction: row;
-          gap: 50px;
+          gap: 10px;
         }
       }
     }
