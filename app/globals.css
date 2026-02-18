@@ -1,3 +1,6 @@
+/* =========================================
+   ROOT COLORS
+========================================= */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -10,17 +13,20 @@
   }
 }
 
-/* =========================
-   FONTS (lokal aus /public/fonts)
-   ========================= */
+/* =========================================
+   LOCAL FONTS (aus /public/fonts)
+========================================= */
+
+/* Poppins Regular – Standard Text */
 @font-face {
-  font-family: "Montserrat";
-  src: url("/fonts/Montserrat-Medium.woff2") format("woff2");
-  font-weight: 500;
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Regular.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
+/* Poppins SemiBold – Buttons / Hervorhebungen */
 @font-face {
   font-family: "Poppins";
   src: url("/fonts/Poppins-SemiBold.woff2") format("woff2");
@@ -29,9 +35,18 @@
   font-display: swap;
 }
 
-/* =========================
-   BASE
-   ========================= */
+/* Montserrat – Headlines */
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================================
+   BASE RESET
+========================================= */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -45,6 +60,9 @@ body {
   scroll-behavior: smooth;
 }
 
+/* =========================================
+   BODY
+========================================= */
 body {
   min-height: 100vh;
   display: flex;
@@ -53,31 +71,40 @@ body {
   color: var(--foreground);
   background: var(--background);
 
-  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial,
-    sans-serif;
-  font-weight: 600;
+  /* Standard Text = Poppins Regular */
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 400;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Überschriften: Montserrat */
+/* =========================================
+   HEADLINES
+========================================= */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial,
-    sans-serif;
+  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   font-weight: 500;
 }
 
-/* OPTIONAL: wenn du bei normalem Text NICHT alles semibold willst:
-   Dann kommentier font-weight: 600 im body aus und setz hier Standard:
-p, li, a, span { font-weight: 400; }
-*/
+/* =========================================
+   STANDARD TEXT ELEMENTS
+========================================= */
+p,
+li,
+span,
+a {
+  font-weight: 400;
+}
 
+/* =========================================
+   LAYOUT HELPERS
+========================================= */
 section {
   padding: 50px 0;
 }
@@ -94,7 +121,7 @@ section {
   min-height: 100vh;
 }
 
-/* Footer klebt unten */
+/* Footer bleibt unten */
 footer {
   margin-top: auto;
 }
@@ -108,10 +135,11 @@ a {
   text-decoration: none;
 }
 
-
+/* =========================================
+   OPTIONAL TEXT BLOCK
+========================================= */
 .text-content {
-  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial,
-    sans-serif;
+  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   font-size: 1.5rem;
   text-align: center;
 }
