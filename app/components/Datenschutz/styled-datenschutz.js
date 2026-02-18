@@ -23,7 +23,8 @@ const StyledDatenschutzContainer = styled.div`
 
 const StyledDatenschutz = styled.div`
   width: min(900px, 95vw);
-  background: rgba(15, 15, 15, 0.75);
+  /* background: rgba(15, 15, 15, 0.75); */
+  background-image: url("/background/background1.jpg");
   border: 5px solid rgb(168, 34, 34);;
   border-radius: 20px;
   padding: 40px;
