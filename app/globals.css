@@ -143,3 +143,33 @@ a {
   font-size: 1.5rem;
   text-align: center;
 }
+
+
+/* =========================
+   GLOBAL BACKGROUND
+   ========================= */
+
+.site-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background: url("/background/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.site-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* edler dunkler Verlauf */
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.65) 40%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+}

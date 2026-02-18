@@ -4,13 +4,12 @@ const StyledWelcomeWrapper = styled.section`
   position: relative;
   width: 100%;
   min-height: 100vh;
-
   background: url("/background/background.jpg") center / cover no-repeat;
 
   &::before {
     content: "";
     position: fixed;
-    inset: 0;
+    inset: 4;
     pointer-events: none;
 
     z-index: 0;
@@ -31,7 +30,7 @@ const StyledHero = styled.div`
   position: relative;
   overflow: hidden;
 
-  border: 2px solid rgba(255, 255, 255, 0.85);
+  border: 5px solid #a82222;
   border-radius: 22px;
 
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
@@ -52,12 +51,11 @@ const StyledHeroOverlay = styled.div`
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: red;
 
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.08) 0%,
-    rgba(0, 0, 0, 0.22) 100%
+    rgba(16, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 100%
   );
 `;
 
@@ -88,8 +86,8 @@ const StyledCard = styled.div`
   width: min(900px, 92vw);
 
   margin: 0 auto;
-
-  background: rgba(15, 15, 15, 0.72);
+  background-image: url("/background/background1.jpg");
+  /* background: rgba(9, 0, 0, 0.85); */
   border: 5px solid #a82222;
   border-radius: 22px;
 
@@ -201,14 +199,27 @@ const StyledSeoSection = styled.section`
 const StyledSeoContainer = styled.div`
   width: min(900px, 92vw);
   margin: 0 auto;
-  color: rgba(255, 255, 255, 0.9);
-  border-top: px solid rgb(255, 255, 255);
+
+  border: 5px solid #a82222;
+  border-radius: 22px;
+  padding: 28px 22px;
+
+  background-image: url("/background/background1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+
+  color: rgba(255, 255, 255, 0.92);
+  text-align: left;
 
   p {
     margin: 14px 0 0;
     line-height: 1.7;
-    opacity: 0.9;
     font-size: 16px;
+    opacity: 1; 
   }
 `;
 
@@ -216,6 +227,7 @@ const StyledSeoTitle = styled.h2`
   margin: 0;
   font-size: 22px;
   letter-spacing: 0.4px;
+  text-align: center;
 `;
 
 export {

@@ -23,7 +23,7 @@ const StyledFooter = styled.footer`
 
         a {
           transition: all 0.3s ease;
-          font-size: 20px;
+          font-size: 18px;
           display: block;
           &:hover {
             color: rgb(168, 34, 34);;
