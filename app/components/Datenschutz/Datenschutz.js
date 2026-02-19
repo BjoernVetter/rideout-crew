@@ -22,7 +22,7 @@ const Datenschutz = () => {
             entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser
             Datenschutzerklärung.
           </p>
-
+          <br />
           <h2>2. Verantwortlicher</h2>
           <p>
             Björn Vetter
@@ -73,15 +73,16 @@ const Datenschutz = () => {
             Diese Website verwendet keine Tracking- oder Analyse-Tools. Es
             werden keine Marketing- oder Analyse-Cookies gesetzt.
           </p>
-
-          <h2>6. Verwendung von Schriftarten</h2>
           <br />
+          <h2>6. Verwendung von Schriftarten</h2>
+
           <p>
             Die auf dieser Website verwendeten Schriftarten werden lokal
             eingebunden. Es erfolgt kein Abruf von Google Fonts oder anderen
             externen Anbietern.
           </p>
           <br />
+
           <h2>7. Ihre Rechte</h2>
           <p>
             Sie haben das Recht auf Auskunft gemäß Art. 15 DSGVO, Berichtigung
