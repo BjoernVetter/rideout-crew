@@ -44,7 +44,7 @@ const StyledDatenschutz = styled.div`
 
   h1 {
 
-    @media (max-width: 390px) {
+    @media (max-width: 500px) {
     font-size: 25px;
 
 
