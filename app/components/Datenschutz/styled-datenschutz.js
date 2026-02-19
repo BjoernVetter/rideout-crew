@@ -42,7 +42,16 @@ const StyledDatenschutz = styled.div`
   width: min(900px, 95vw);
   padding: 40px;
 
-  h1,
+  h1 {
+
+    @media (max-width: 380px) {
+    font-size: 25px;
+
+
+
+
+
+  }
   h2,
   p {
     color: rgba(255, 255, 255, 0.92);

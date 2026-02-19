@@ -12,8 +12,10 @@ const Datenschutz = () => {
       <StyledDatenschutzContainer>
         <StyledDatenschutz>
           <h1>Datenschutzerklärung</h1>
+          <br />
 
           <h2>1. Allgemeine Hinweise</h2>
+
           <p>
             Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen.
             Wir behandeln Ihre personenbezogenen Daten vertraulich und
@@ -34,6 +36,8 @@ const Datenschutz = () => {
             E-Mail: fineschliffdesign@yahoo.de
           </p>
 
+          <br />
+
           <h2>3. Hosting</h2>
           <p>
             Diese Website wird bei einem externen Dienstleister (Vercel Inc.,
@@ -53,6 +57,7 @@ const Datenschutz = () => {
             Diese Daten dienen der technischen Bereitstellung und Sicherheit der
             Website. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.
           </p>
+          <br />
 
           <h2>4. Externe Links zu Social Media</h2>
           <p>
@@ -61,6 +66,7 @@ const Datenschutz = () => {
             Sie unsere Website. Für die Datenverarbeitung auf diesen Plattformen
             ist ausschließlich der jeweilige Anbieter verantwortlich.
           </p>
+          <br />
 
           <h2>5. Keine Cookies & kein Tracking</h2>
           <p>
@@ -69,12 +75,13 @@ const Datenschutz = () => {
           </p>
 
           <h2>6. Verwendung von Schriftarten</h2>
+          <br />
           <p>
             Die auf dieser Website verwendeten Schriftarten werden lokal
             eingebunden. Es erfolgt kein Abruf von Google Fonts oder anderen
             externen Anbietern.
           </p>
-
+          <br />
           <h2>7. Ihre Rechte</h2>
           <p>
             Sie haben das Recht auf Auskunft gemäß Art. 15 DSGVO, Berichtigung
