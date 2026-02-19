@@ -36,7 +36,8 @@ const Welcome = () => {
 
       <StyledContent>
         <StyledCard>
-          <StyledTitle>Willkommen bei RideOut</StyledTitle>
+          <StyledTitle>Willkommen bei der RideOut Crew</StyledTitle>
+          <br />
 
           <StyledSubTitle>
             BIKER COMMUNITY • DÜSSELDORF & UMGEBUNG
@@ -47,7 +48,7 @@ const Welcome = () => {
             <br />
             <strong>Unser Fokus:</strong> gemeinsame Ausfahrten und gute Leute.
           </StyledText>
-
+          <br />
           <StyledActions>
             <StyledSocialLink
               href="https://www.instagram.com/rideout.crew?igsh=MXFra2s0Z3k2cjdidg%3D%3D&utm_source=qr/"
@@ -85,7 +86,7 @@ const Welcome = () => {
         <StyledSeoSection>
           <StyledSeoContainer>
             <StyledSeoTitle>Motorradgruppe Düsseldorf</StyledSeoTitle>
-
+            <br />
             <p>
               Die RideOut Crew ist eine Motorradgruppe aus Düsseldorf für
               Motorradfahrerinnen und Motorradfahrer aus Düsseldorf und

@@ -104,7 +104,7 @@ const StyledCard = styled.div`
 
 const StyledTitle = styled.h1`
   margin: 0;
-  font-size: clamp(45px, 4vw, 50px);
+  font-size: clamp(40px, 4vw, 50px);
   line-height: 1.1;
   letter-spacing: 0.4px;
 
@@ -133,7 +133,7 @@ const StyledText = styled.p`
 
 const StyledActions = styled.div`
   display: grid;
-  gap: 15px;
+  gap: 19px;
   margin: 18px 0 18px;
 `;
 
