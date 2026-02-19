@@ -62,7 +62,7 @@ const StyledHeroAlphaLogo = styled.video`
 
   @media (max-width: 520px) {
     transform: translate(-50%, -50%) scale(2.5);
-    top: 50%;
+    top: 35%;
   }
 
   @media (max-width: 380px) {
@@ -99,6 +99,7 @@ const StyledCard = styled.div`
   margin: 0 auto;
   padding: 28px 22px;
   text-align: center;
+  
 `;
 
 const StyledTitle = styled.h1`
