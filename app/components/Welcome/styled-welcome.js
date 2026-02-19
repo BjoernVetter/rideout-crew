@@ -26,72 +26,51 @@ const StyledWelcomeWrapper = styled.section`
     z-index: 1;
   }
 `;
+
 const StyledHero = styled.div`
   width: 100%;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-`;
 
-const StyledHeroOverlay = styled.div`
-  position: absolute;
-  inset: 0;
-  z-index: 1;
+  video {
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%) scale(2.2);
+    will-change: transform;
 
-  background: linear-gradient(
-    180deg,
-    rgba(16, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
-`;
-const StyledHeroAlphaLogo = styled.video`
-  position: absolute;
-  left: 50%;
-  top: 52%;
-  transform: translate(-50%, -50%) scale(2.2);
-  will-change: transform;
+    width: 100vw;
+    max-width: 1600px;
+    height: auto;
 
-  width: 100vw;
-  max-width: 1600px;
-  height: auto;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 2;
 
-  object-fit: contain;
-  pointer-events: none;
-  z-index: 2;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.55));
+    background: transparent;
+    display: block;
 
-  @media (max-width: 520px) {
-    transform: translate(-50%, -50%) scale(2.5);
-    top: 35%;
-  }
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.55));
 
-  @media (max-width: 380px) {
-    transform: translate(-50%, -50%) scale(2);
-  }
+    @media (max-width: 520px) {
+      transform: translate(-50%, -50%) scale(2.5);
+      top: 35%;
+    }
 
-  @media (min-width: 1100px) {
-    transform: translate(-50%, -50%) scale(1.4);
+    @media (max-width: 380px) {
+      transform: translate(-50%, -50%) scale(2);
+    }
+
+    @media (min-width: 1100px) {
+      transform: translate(-50%, -50%) scale(1.4);
+    }
   }
 `;
 
 const StyledContent = styled.div`
   padding: 60px 0 80px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-  }
-
-  > * {
-    position: relative;
-    z-index: 1;
-  }
 `;
 
 const StyledCard = styled.div`
@@ -99,100 +78,79 @@ const StyledCard = styled.div`
   margin: 0 auto;
   padding: 28px 22px;
   text-align: center;
-  
-`;
 
-const StyledTitle = styled.h1`
-  margin: 0;
-  font-size: clamp(40px, 4vw, 50px);
-  line-height: 1.1;
-  letter-spacing: 0.4px;
-
-  overflow-wrap: anywhere;
-  word-break: break-word;
-`;
-
-const StyledSubTitle = styled.p`
-  margin: 10px 0 18px;
-  font-size: 25px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  opacity: 0.92;
-`;
-
-const StyledText = styled.p`
-  margin: 0 0 20px;
-  font-size: 20px;
-  line-height: 1.55;
-  opacity: 0.92;
-
-  strong {
-    font-weight: 800;
+  h1 {
+    margin: 0;
+    font-size: clamp(40px, 4vw, 50px);
+    line-height: 1.1;
+    letter-spacing: 0.4px;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
-`;
 
-const StyledActions = styled.div`
-  display: grid;
-  gap: 19px;
-  margin: 18px 0 18px;
-`;
-
-const StyledSocialLink = styled.a`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-
-  margin: 0 auto;
-  width: 50%;
-  padding: 14px 16px;
-
-  border-radius: 16px;
-  text-decoration: none;
-  backdrop-filter: blur(5px);
-
-  background: rgba(255, 255, 255, 0.18);
-  border: 3px solid rgb(255, 255, 255);
-
-  color: rgba(255, 255, 255, 0.92);
-  font-size: 18px;
-  font-weight: 700;
-
-  transition:
-    transform 0.15s ease,
-    background 0.15s ease,
-    border 0.15s ease;
-
-  &:hover {
-    transform: translateY(-1px);
-    background: rgba(199, 11, 11, 0.31);
-    border-color: rgb(168, 34, 34);
+  .subtitle {
+    margin: 14px 0 18px;
+    font-size: clamp(16px, 2.4vw, 25px);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.92;
+    font-weight: 600;
   }
-  /* buttons */
-  img {
-    filter: invert(1);
-    opacity: 0.95;
+
+  .text {
+    margin: 0 0 20px;
+    font-size: clamp(16px, 2.2vw, 20px);
+    line-height: 1.6;
+    opacity: 0.92;
+
+    strong {
+      font-weight: 800;
+    }
   }
-`;
 
-const StyledQrBox = styled.div`
-  margin-top: 18px;
-  padding-top: 16px;
-  
-`;
+  .actions {
+    display: grid;
+    gap: 19px;
+    margin: 18px 0 18px;
+    justify-items: center;
+  }
 
-const StyledQrTitle = styled.h3`
-  margin: 0 0 12px;
-  font-size: 19px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  opacity: 0.9;
-`;
+  .socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
 
-const StyledHint = styled.p`
-  margin: 12px 0 0;
-  font-size: 14px;
-  opacity: 0.75;
+    width: min(520px, 80%);
+    padding: 14px 16px;
+
+    border-radius: 16px;
+    text-decoration: none;
+    backdrop-filter: blur(5px);
+
+    background: rgba(255, 255, 255, 0.18);
+    border: 3px solid rgb(255, 255, 255);
+
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 18px;
+    font-weight: 700;
+
+    transition:
+      transform 0.15s ease,
+      background 0.15s ease,
+      border 0.15s ease;
+
+    &:hover {
+      transform: translateY(-1px);
+      background: rgba(199, 11, 11, 0.31);
+      border-color: rgb(168, 34, 34);
+    }
+
+    img {
+      filter: invert(1);
+      opacity: 0.95;
+    }
+  }
 `;
 
 const StyledSeoSection = styled.section`
@@ -204,39 +162,51 @@ const StyledSeoContainer = styled.div`
   margin: 0 auto;
   padding: 28px 22px;
   color: rgba(255, 255, 255, 0.92);
-  
 
-  p {
-    margin: 14px 0 0;
-    line-height: 1.7;
-    font-size: 20px;
-    opacity: 1;
+  h2 {
+    margin: 0 0 18px;
+    font-size: clamp(22px, 3vw, 30px);
+    letter-spacing: 0.4px;
+    text-align: center;
   }
-`;
 
-const StyledSeoTitle = styled.h2`
-  margin: 0;
-  font-size: 30px;
-  letter-spacing: 0.4px;
-  text-align: center;
+  
+  p {
+    max-width: 70ch;
+    margin: 12px auto 0;
+    line-height: 1.85;
+    font-size: clamp(16px, 2.2vw, 20px);
+    opacity: 0.98;
+
+    hyphens: auto;
+    text-wrap: pretty;
+  }
 `;
 
 export {
   StyledWelcomeWrapper,
   StyledHero,
-  StyledHeroAlphaLogo,
-  StyledHeroOverlay,
   StyledContent,
   StyledCard,
-  StyledTitle,
-  StyledSubTitle,
-  StyledText,
-  StyledActions,
-  StyledSocialLink,
-  StyledQrBox,
-  StyledQrTitle,
-  StyledHint,
   StyledSeoSection,
   StyledSeoContainer,
-  StyledSeoTitle,
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

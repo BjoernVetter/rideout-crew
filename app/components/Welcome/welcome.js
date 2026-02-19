@@ -4,53 +4,39 @@ import Image from "next/image";
 import {
   StyledWelcomeWrapper,
   StyledHero,
-  StyledHeroAlphaLogo,
-  StyledHeroOverlay,
   StyledContent,
   StyledCard,
-  StyledTitle,
-  StyledSubTitle,
-  StyledText,
-  StyledActions,
-  StyledSocialLink,
   StyledSeoSection,
   StyledSeoContainer,
-  StyledSeoTitle,
 } from "./styled-welcome";
 
 const Welcome = () => {
   return (
     <StyledWelcomeWrapper>
-      {/* <StyledHero>
-        <StyledHeroAlphaLogo autoPlay muted loop playsInline preload="metadata">
-          <source src="/logo/logo-alpha.webm" type="video/webm" />
-        </StyledHeroAlphaLogo>
-      </StyledHero> */}
-
       <StyledHero>
-        <StyledHeroAlphaLogo autoPlay muted loop playsInline preload="metadata">
-          <source src="/videos/logo-alpha.mov" type="video/quicktime" />
+        <video autoPlay muted loop playsInline preload="metadata">
+          {/* Chrome/Firefox */}
           <source src="/logo/logo-alpha.webm" type="video/webm" />
-        </StyledHeroAlphaLogo>
+          {/* Safari/iOS */}
+          <source src="/videos/logo-alpha.mov" type="video/quicktime" />
+        </video>
       </StyledHero>
 
       <StyledContent>
         <StyledCard>
-          <StyledTitle>Willkommen bei der RideOut Crew</StyledTitle>
-          <br />
+          <h1>Willkommen bei der RideOut Crew</h1>
 
-          <StyledSubTitle>
-            BIKER COMMUNITY • DÜSSELDORF & UMGEBUNG
-          </StyledSubTitle>
+          <p className="subtitle">BIKER COMMUNITY • DÜSSELDORF & UMGEBUNG</p>
 
-          <StyledText>
+          <p className="text">
             Motorradgruppe aus Düsseldorf – offen für alle Bikes & Fahrstile.
             <br />
             <strong>Unser Fokus:</strong> gemeinsame Ausfahrten und gute Leute.
-          </StyledText>
-          <br />
-          <StyledActions>
-            <StyledSocialLink
+          </p>
+
+          <div className="actions">
+            <a
+              className="socialLink"
               href="https://www.instagram.com/rideout.crew?igsh=MXFra2s0Z3k2cjdidg%3D%3D&utm_source=qr/"
               target="_blank"
               rel="noreferrer"
@@ -58,9 +44,10 @@ const Welcome = () => {
             >
               <Image src="/icons/instagram.svg" alt="" width={22} height={22} />
               Instagram
-            </StyledSocialLink>
+            </a>
 
-            <StyledSocialLink
+            <a
+              className="socialLink"
               href="https://www.facebook.com/people/Ride-Out/61579355470970/"
               target="_blank"
               rel="noreferrer"
@@ -68,9 +55,10 @@ const Welcome = () => {
             >
               <Image src="/icons/facebook.svg" alt="" width={22} height={22} />
               Facebook
-            </StyledSocialLink>
+            </a>
 
-            <StyledSocialLink
+            <a
+              className="socialLink"
               href="https://chat.whatsapp.com/Dw69aPOJGTkG1aFSFpFDCN"
               target="_blank"
               rel="noreferrer"
@@ -78,15 +66,14 @@ const Welcome = () => {
             >
               <Image src="/icons/whatsapp.svg" alt="" width={22} height={22} />
               WhatsApp
-            </StyledSocialLink>
-          </StyledActions>
+            </a>
+          </div>
         </StyledCard>
 
-        {/* SEO SECTION */}
         <StyledSeoSection>
           <StyledSeoContainer>
-            <StyledSeoTitle>Motorradgruppe Düsseldorf</StyledSeoTitle>
-            <br />
+            <h2>Motorradgruppe Düsseldorf</h2>
+
             <p>
               Die RideOut Crew ist eine Motorradgruppe aus Düsseldorf für
               Motorradfahrerinnen und Motorradfahrer aus Düsseldorf und
