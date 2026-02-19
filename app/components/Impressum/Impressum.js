@@ -3,17 +3,17 @@ import React from "react";
 import {
   StyledImpressumSection,
   StyledImpressumContainer,
-  StyledImpressum,
+  StyledImpressumContent,
 } from "./styled-impressum";
 
 const Impressum = () => {
   return (
     <StyledImpressumSection id="impressum">
       <StyledImpressumContainer>
-        <StyledImpressum>
+        <StyledImpressumContent>
           <h1>Impressum</h1>
 
-          <p>
+          <p className="lead">
             <strong>Angaben gemäß § 5 TMG</strong>
           </p>
 
@@ -65,7 +65,7 @@ const Impressum = () => {
             Die durch die Seitenbetreiber erstellten Inhalte und Werke auf
             diesen Seiten unterliegen dem deutschen Urheberrecht.
           </p>
-        </StyledImpressum>
+        </StyledImpressumContent>
       </StyledImpressumContainer>
     </StyledImpressumSection>
   );

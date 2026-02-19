@@ -4,12 +4,9 @@ import styled from "styled-components";
 const StyledDatenschutzSection = styled.section`
   min-height: 100vh;
   width: 100%;
-
-  background-image: url("/background/background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   position: relative;
+
+  background: url("/background/background.jpg") center / cover no-repeat;
 
   &::before {
     content: "";
@@ -38,36 +35,60 @@ const StyledDatenschutzContainer = styled.div`
   justify-content: center;
 `;
 
-const StyledDatenschutz = styled.div`
+const StyledDatenschutzContent = styled.div`
   width: min(900px, 95vw);
-  padding: 40px;
+  padding: 0;
 
+  color: rgba(255, 255, 255, 0.92);
+
+  /* Typo */
   h1 {
-
-    @media (max-width: 500px) {
-    font-size: 25px;
-
-
-
-
-
-  }
-  h2,
-  p {
-    color: rgba(255, 255, 255, 0.92);
-  }
-
-  p {
-    line-height: 1.7;
+    margin: 0 0 26px;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: 0.2px;
   }
 
   h2 {
-    margin-top: 26px;
+    margin: 28px 0 10px;
+    font-size: clamp(18px, 2.4vw, 22px);
+    font-weight: 700;
+    letter-spacing: 0.2px;
+  }
+
+  p {
+    margin: 0;
+    margin-top: 10px;
+    max-width: 70ch;         
+    font-size: clamp(16px, 2vw, 18px);
+    opacity: 0.97;
+
+    hyphens: auto;
+    text-wrap: pretty;
+  }
+
+ 
+  p + h2 {
+    margin-top: 32px;
+  }
+
+  ul {
+    margin: 12px 0 0;
+    padding-left: 20px;
+    max-width: 70ch;
+  }
+
+  li {
+    margin: 8px 0;
+    line-height: 1.7;
+    font-size: clamp(16px, 2vw, 18px);
+    opacity: 0.96;
   }
 `;
 
 export {
   StyledDatenschutzSection,
   StyledDatenschutzContainer,
-  StyledDatenschutz,
+  StyledDatenschutzContent,
 };

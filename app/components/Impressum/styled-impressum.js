@@ -4,14 +4,10 @@ import styled from "styled-components";
 const StyledImpressumSection = styled.section`
   min-height: 100vh;
   width: 100%;
-
-  background-image: url("/background/background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   position: relative;
 
-  /* Dark Overlay */
+  background: url("/background/background.jpg") center / cover no-repeat;
+
   &::before {
     content: "";
     position: absolute;
@@ -26,7 +22,6 @@ const StyledImpressumSection = styled.section`
     z-index: 0;
   }
 
-  /* 🔥 Wichtig: Inhalt über Overlay */
   > * {
     position: relative;
     z-index: 1;
@@ -40,35 +35,46 @@ const StyledImpressumContainer = styled.div`
   justify-content: center;
 `;
 
-const StyledImpressum = styled.div`
+const StyledImpressumContent = styled.div`
   width: min(900px, 95vw);
-  padding: 40px;
+  padding: 0;
 
   color: rgba(255, 255, 255, 0.92);
 
   h1 {
-    font-size: clamp(28px, 4vw, 42px);
-    margin-bottom: 20px;
-    font-weight: 600;
+    margin: 0 0 26px;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: 0.2px;
   }
 
   h2 {
-    margin-top: 32px;
-    margin-bottom: 10px;
-    font-size: 22px;
-    font-weight: 500;
+    margin: 30px 0 10px;
+    font-size: clamp(18px, 2.4vw, 22px);
+    font-weight: 700;
+    letter-spacing: 0.2px;
   }
 
   p {
-    line-height: 1.8;
-    margin-bottom: 14px;
-    font-size: 16px;
-    opacity: 0.95;
+    margin: 10px 0 0;
+    max-width: 70ch;
+    line-height: 1.85;
+    font-size: clamp(16px, 2vw, 18px);
+    opacity: 0.97;
+
+    hyphens: auto;
+    text-wrap: pretty;
+  }
+
+  .lead {
+    margin-top: 0;
+    opacity: 0.98;
   }
 `;
 
 export {
   StyledImpressumSection,
   StyledImpressumContainer,
-  StyledImpressum
+  StyledImpressumContent,
 };

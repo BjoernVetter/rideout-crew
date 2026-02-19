@@ -3,40 +3,32 @@ import React from "react";
 import {
   StyledDatenschutzSection,
   StyledDatenschutzContainer,
-  StyledDatenschutz,
+  StyledDatenschutzContent,
 } from "./styled-datenschutz";
 
 const Datenschutz = () => {
   return (
     <StyledDatenschutzSection id="datenschutz">
       <StyledDatenschutzContainer>
-        <StyledDatenschutz>
+        <StyledDatenschutzContent>
           <h1>Datenschutzerklärung</h1>
-          <br />
 
           <h2>1. Allgemeine Hinweise</h2>
-
           <p>
             Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen.
             Wir behandeln Ihre personenbezogenen Daten vertraulich und
             entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser
             Datenschutzerklärung.
           </p>
-          <br />
+
           <h2>2. Verantwortlicher</h2>
           <p>
-            Björn Vetter
-            <br />
-            Engelbertstraße 13
-            <br />
-            40233 Düsseldorf
-            <br />
-            Deutschland
-            <br />
+            Björn Vetter <br />
+            Engelbertstraße 13 <br />
+            40233 Düsseldorf <br />
+            Deutschland <br />
             E-Mail: fineschliffdesign@yahoo.de
           </p>
-
-          <br />
 
           <h2>3. Hosting</h2>
           <p>
@@ -57,7 +49,6 @@ const Datenschutz = () => {
             Diese Daten dienen der technischen Bereitstellung und Sicherheit der
             Website. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.
           </p>
-          <br />
 
           <h2>4. Externe Links zu Social Media</h2>
           <p>
@@ -66,22 +57,19 @@ const Datenschutz = () => {
             Sie unsere Website. Für die Datenverarbeitung auf diesen Plattformen
             ist ausschließlich der jeweilige Anbieter verantwortlich.
           </p>
-          <br />
 
-          <h2>5. Keine Cookies & kein Tracking</h2>
+          <h2>5. Keine Cookies &amp; kein Tracking</h2>
           <p>
             Diese Website verwendet keine Tracking- oder Analyse-Tools. Es
             werden keine Marketing- oder Analyse-Cookies gesetzt.
           </p>
-          <br />
-          <h2>6. Verwendung von Schriftarten</h2>
 
+          <h2>6. Verwendung von Schriftarten</h2>
           <p>
             Die auf dieser Website verwendeten Schriftarten werden lokal
             eingebunden. Es erfolgt kein Abruf von Google Fonts oder anderen
             externen Anbietern.
           </p>
-          <br />
 
           <h2>7. Ihre Rechte</h2>
           <p>
@@ -91,7 +79,7 @@ const Datenschutz = () => {
             DSGVO. Hierzu können Sie sich jederzeit unter der oben angegebenen
             E-Mail-Adresse an uns wenden.
           </p>
-        </StyledDatenschutz>
+        </StyledDatenschutzContent>
       </StyledDatenschutzContainer>
     </StyledDatenschutzSection>
   );
