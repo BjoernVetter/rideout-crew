@@ -27,24 +27,14 @@ const Welcome = () => {
         </StyledHeroAlphaLogo>
       </StyledHero> */}
 
-
-<StyledHero>
-  <StyledHeroAlphaLogo
-    autoPlay
-    muted
-    loop
-    playsInline
-    preload="metadata"
-  >
-    {/* Safari */}
-    <source src="/videos/logo-alpha.mov" type="video/quicktime" />
+     <StyledHero>
+  <StyledHeroAlphaLogo autoPlay muted loop playsInline preload="metadata">
     {/* Chrome / Firefox */}
     <source src="/logo/logo-alpha.webm" type="video/webm" />
+    {/* Safari / iOS */}
+    <source src="/videos/logo-alpha.mov" type="video/quicktime" />
   </StyledHeroAlphaLogo>
 </StyledHero>
-
-
-
 
       <StyledContent>
         <StyledCard>
