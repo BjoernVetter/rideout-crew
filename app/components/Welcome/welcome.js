@@ -21,11 +21,30 @@ import {
 const Welcome = () => {
   return (
     <StyledWelcomeWrapper>
-      <StyledHero>
+      {/* <StyledHero>
         <StyledHeroAlphaLogo autoPlay muted loop playsInline preload="metadata">
           <source src="/logo/logo-alpha.webm" type="video/webm" />
         </StyledHeroAlphaLogo>
-      </StyledHero>
+      </StyledHero> */}
+
+
+<StyledHero>
+  <StyledHeroAlphaLogo
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="metadata"
+  >
+    {/* Safari */}
+    <source src="/videos/logo-alpha.mov" type="video/quicktime" />
+    {/* Chrome / Firefox */}
+    <source src="/logo/logo-alpha.webm" type="video/webm" />
+  </StyledHeroAlphaLogo>
+</StyledHero>
+
+
+
 
       <StyledContent>
         <StyledCard>
