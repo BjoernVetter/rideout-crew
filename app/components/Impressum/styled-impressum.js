@@ -9,40 +9,66 @@ const StyledImpressumSection = styled.section`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  /* optional: damit Text besser lesbar ist */
   position: relative;
+
+  /* Dark Overlay */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.55) 50%,
+      rgba(0, 0, 0, 0.65) 100%
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* 🔥 Wichtig: Inhalt über Overlay */
+  > * {
+    position: relative;
+    z-index: 1;
+  }
 `;
 
 const StyledImpressumContainer = styled.div`
   width: 100%;
-  padding: 140px 20px 80px; /* Platz oben */
+  padding: 140px 20px 80px;
   display: flex;
   justify-content: center;
 `;
 
 const StyledImpressum = styled.div`
   width: min(900px, 95vw);
-  /* background: rgba(15, 15, 15, 0.75); */
-  background-image: url("/background/background1.jpg");
-  border: 5px solid rgb(168, 34, 34);;
-  border-radius: 20px;
   padding: 40px;
-  backdrop-filter: blur(10px);
 
-  h1,
-  h2,
-  p {
-    color: rgba(255, 255, 255, 0.92);
-  }
+  color: rgba(255, 255, 255, 0.92);
 
-  p {
-    line-height: 1.7;
+  h1 {
+    font-size: clamp(28px, 4vw, 42px);
+    margin-bottom: 20px;
+    font-weight: 600;
   }
 
   h2 {
-    margin-top: 26px;
+    margin-top: 32px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  p {
+    line-height: 1.8;
+    margin-bottom: 14px;
+    font-size: 16px;
+    opacity: 0.95;
   }
 `;
 
-export { StyledImpressumSection, StyledImpressumContainer, StyledImpressum };
+export {
+  StyledImpressumSection,
+  StyledImpressumContainer,
+  StyledImpressum
+};

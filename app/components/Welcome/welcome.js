@@ -4,7 +4,7 @@ import Image from "next/image";
 import {
   StyledWelcomeWrapper,
   StyledHero,
-  StyledHeroVideo,
+  StyledHeroAlphaLogo,
   StyledHeroOverlay,
   StyledContent,
   StyledCard,
@@ -21,18 +21,16 @@ import {
 const Welcome = () => {
   return (
     <StyledWelcomeWrapper>
-      {/* HERO VIDEO */}
       <StyledHero>
-        <StyledHeroVideo autoPlay muted loop playsInline preload="metadata">
-          <source src="/videos/rideout-hero.mp4" type="video/mp4" />
-        </StyledHeroVideo>
-        <StyledHeroOverlay />
+        <StyledHeroAlphaLogo autoPlay muted loop playsInline preload="metadata">
+          <source src="/logo/logo-alpha.webm" type="video/webm" />
+        </StyledHeroAlphaLogo>
       </StyledHero>
 
       <StyledContent>
         <StyledCard>
-          <StyledTitle>RideOut Crew</StyledTitle>
-          {/* <StyledTitle>Motorradgruppe Düsseldorf RideOut Crew</StyledTitle> */}
+          <StyledTitle>Willkommen bei RideOut</StyledTitle>
+
           <StyledSubTitle>
             BIKER COMMUNITY • DÜSSELDORF & UMGEBUNG
           </StyledSubTitle>
@@ -55,7 +53,7 @@ const Welcome = () => {
             </StyledSocialLink>
 
             <StyledSocialLink
-              href="https://www.facebook.com/people/Ride-Out/61579355470970/?mibextid=wwXIfr&rdid=Vx4COYzCvJh03BCH&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17WJR7v7bt%2F%3Fmibextid%3DwwXIfr/"
+              href="https://www.facebook.com/people/Ride-Out/61579355470970/"
               target="_blank"
               rel="noreferrer"
               aria-label="Facebook"
@@ -76,12 +74,10 @@ const Welcome = () => {
           </StyledActions>
         </StyledCard>
 
-        {/* SEO SECTION (unter der Card) */}
+        {/* SEO SECTION */}
         <StyledSeoSection>
           <StyledSeoContainer>
-            <StyledSeoTitle>
-              Motorradgruppe Düsseldorf – RideOut Crew
-            </StyledSeoTitle>
+            <StyledSeoTitle>Motorradgruppe Düsseldorf</StyledSeoTitle>
 
             <p>
               Die RideOut Crew ist eine Motorradgruppe aus Düsseldorf für

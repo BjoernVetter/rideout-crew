@@ -8,10 +8,16 @@ const StyledWelcomeWrapper = styled.section`
 
   &::before {
     content: "";
-    position: fixed;
-    inset: 4;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.45) 40%,
+      rgba(0, 0, 0, 0.55) 100%
+    );
+    backdrop-filter: blur(2px);
     pointer-events: none;
-
     z-index: 0;
   }
 
@@ -20,31 +26,11 @@ const StyledWelcomeWrapper = styled.section`
     z-index: 1;
   }
 `;
-
 const StyledHero = styled.div`
-  width: min(1400px, 95vw);
-  height: 33vh;
-  min-height: 500px;
-
-  margin: 22px auto 0;
+  width: 100%;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
-
-  border: 5px solid #a82222;
-  border-radius: 22px;
-
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
-`;
-
-const StyledHeroVideo = styled.video`
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 0;
-  filter: contrast(1.05) saturate(1.05);
 `;
 
 const StyledHeroOverlay = styled.div`
@@ -58,11 +44,38 @@ const StyledHeroOverlay = styled.div`
     rgba(0, 0, 0, 0) 100%
   );
 `;
+const StyledHeroAlphaLogo = styled.video`
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%) scale(2.2);
+  will-change: transform;
+
+  width: 100vw;
+  max-width: 1600px;
+  height: auto;
+
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 2;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.55));
+
+  @media (max-width: 520px) {
+    transform: translate(-50%, -50%) scale(2.5);
+    top: 50%;
+  }
+
+  @media (max-width: 380px) {
+    transform: translate(-50%, -50%) scale(2);
+  }
+
+  @media (min-width: 1100px) {
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+`;
 
 const StyledContent = styled.div`
   padding: 60px 0 80px;
-
-  background-image: url("/background/background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -72,7 +85,6 @@ const StyledContent = styled.div`
     content: "";
     position: absolute;
     inset: 0;
-    /* background: rgba(0, 0, 0, 0.45); */
     pointer-events: none;
   }
 
@@ -84,27 +96,15 @@ const StyledContent = styled.div`
 
 const StyledCard = styled.div`
   width: min(900px, 92vw);
-
   margin: 0 auto;
-  background-image: url("/background/background1.jpg");
-  /* background: rgba(9, 0, 0, 0.85); */
-  border: 5px solid #a82222;
-  border-radius: 22px;
-
   padding: 28px 22px;
-  backdrop-filter: blur(10px);
-
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
   text-align: center;
 `;
 
 const StyledTitle = styled.h1`
   margin: 0;
-
-  font-size: clamp(26px, 6vw, 40px);
-
+  font-size: clamp(45px, 4vw, 50px);
   line-height: 1.1;
-
   letter-spacing: 0.4px;
 
   overflow-wrap: anywhere;
@@ -113,15 +113,15 @@ const StyledTitle = styled.h1`
 
 const StyledSubTitle = styled.p`
   margin: 10px 0 18px;
-  font-size: 14px;
+  font-size: 25px;
   letter-spacing: 3px;
-  opacity: 0.75;
   text-transform: uppercase;
+  opacity: 0.92;
 `;
 
 const StyledText = styled.p`
   margin: 0 0 20px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.55;
   opacity: 0.92;
 
@@ -132,7 +132,7 @@ const StyledText = styled.p`
 
 const StyledActions = styled.div`
   display: grid;
-  gap: 12px;
+  gap: 15px;
   margin: 18px 0 18px;
 `;
 
@@ -140,16 +140,18 @@ const StyledSocialLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin: auto;
+  gap: 16px;
+
+  margin: 0 auto;
   width: 50%;
   padding: 14px 16px;
 
   border-radius: 16px;
   text-decoration: none;
+  backdrop-filter: blur(5px);
 
-  background: rgba(177, 9, 9, 0.08);
-  border: 2px solid rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.18);
+  border: 3px solid rgb(255, 255, 255);
 
   color: rgba(255, 255, 255, 0.92);
   font-size: 18px;
@@ -162,10 +164,10 @@ const StyledSocialLink = styled.a`
 
   &:hover {
     transform: translateY(-1px);
-    background: rgba(65, 10, 10, 0.31);
+    background: rgba(199, 11, 11, 0.31);
     border-color: rgb(168, 34, 34);
   }
-
+  /* buttons */
   img {
     filter: invert(1);
     opacity: 0.95;
@@ -175,12 +177,12 @@ const StyledSocialLink = styled.a`
 const StyledQrBox = styled.div`
   margin-top: 18px;
   padding-top: 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  
 `;
 
 const StyledQrTitle = styled.h3`
   margin: 0 0 12px;
-  font-size: 18px;
+  font-size: 19px;
   letter-spacing: 2px;
   text-transform: uppercase;
   opacity: 0.9;
@@ -199,33 +201,21 @@ const StyledSeoSection = styled.section`
 const StyledSeoContainer = styled.div`
   width: min(900px, 92vw);
   margin: 0 auto;
-
-  border: 5px solid #a82222;
-  border-radius: 22px;
   padding: 28px 22px;
-
-  background-image: url("/background/background1.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  backdrop-filter: blur(10px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
-
   color: rgba(255, 255, 255, 0.92);
-  text-align: left;
+  
 
   p {
     margin: 14px 0 0;
     line-height: 1.7;
-    font-size: 16px;
-    opacity: 1; 
+    font-size: 20px;
+    opacity: 1;
   }
 `;
 
 const StyledSeoTitle = styled.h2`
   margin: 0;
-  font-size: 22px;
+  font-size: 30px;
   letter-spacing: 0.4px;
   text-align: center;
 `;
@@ -233,11 +223,10 @@ const StyledSeoTitle = styled.h2`
 export {
   StyledWelcomeWrapper,
   StyledHero,
-  StyledHeroVideo,
+  StyledHeroAlphaLogo,
   StyledHeroOverlay,
   StyledContent,
   StyledCard,
-  StyledLogoRow,
   StyledTitle,
   StyledSubTitle,
   StyledText,

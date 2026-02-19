@@ -9,8 +9,26 @@ const StyledDatenschutzSection = styled.section`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.55) 50%,
+      rgba(0, 0, 0, 0.65) 100%
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
 `;
 
 const StyledDatenschutzContainer = styled.div`
@@ -18,17 +36,11 @@ const StyledDatenschutzContainer = styled.div`
   padding: 140px 20px 80px;
   display: flex;
   justify-content: center;
-
 `;
 
 const StyledDatenschutz = styled.div`
   width: min(900px, 95vw);
-  /* background: rgba(15, 15, 15, 0.75); */
-  background-image: url("/background/background1.jpg");
-  border: 5px solid rgb(168, 34, 34);;
-  border-radius: 20px;
   padding: 40px;
-  backdrop-filter: blur(10px);
 
   h1,
   h2,
