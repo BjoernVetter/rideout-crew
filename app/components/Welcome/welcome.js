@@ -18,7 +18,7 @@ const Welcome = () => {
           {/* Chrome/Firefox */}
           <source src="/logo/logo-alpha.webm" type="video/webm" />
           {/* Safari/iOS */}
-          <source src="/videos/logo-alpha.mov" type="video/quicktime" />
+          <source src="/videos/logo-alpha.mov?v=2" type="video/quicktime" />
         </video>
       </StyledHero>
 
