@@ -12,7 +12,6 @@ const StyledWelcomeWrapper = styled.section`
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    backdrop-filter: blur(2px);
 
     background: linear-gradient(
       180deg,
@@ -20,14 +19,10 @@ const StyledWelcomeWrapper = styled.section`
       rgba(0, 0, 0, 0.35) 40%,
       rgba(0, 0, 0, 0.65) 100%
     );
-  }
 
-  &::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
+    /* Achtung: iOS/Safari kann bei backdrop-filter zicken.
+       Wenn wieder Probleme auftreten: diese Zeile testweise auskommentieren. */
+    backdrop-filter: blur(2px);
   }
 
   > * {
@@ -42,20 +37,6 @@ const StyledHero = styled.div`
   position: relative;
   overflow: hidden;
 
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      180deg
-        /* rgba(0, 0, 0, 0.55) 0%,
-      rgba(0, 0, 0, 0.45) 40%,
-      rgba(0, 0, 0, 0.55) 100% */
-    );
-    pointer-events: none;
-    z-index: 1;
-  }
-
   video {
     position: absolute;
     left: 50%;
@@ -69,7 +50,6 @@ const StyledHero = styled.div`
 
     object-fit: contain;
     pointer-events: none;
-
     z-index: 2;
 
     background: transparent;
@@ -95,19 +75,6 @@ const StyledHero = styled.div`
 const StyledContent = styled.div`
   padding: 60px 0 80px;
   position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  > * {
-    position: relative;
-    z-index: 1;
-  }
 `;
 
 const StyledCard = styled.div`
@@ -121,8 +88,6 @@ const StyledCard = styled.div`
     font-size: clamp(40px, 4vw, 50px);
     line-height: 1.1;
     letter-spacing: 0.4px;
-    overflow-wrap: anywhere;
-    word-break: break-word;
   }
 
   .subtitle {
@@ -172,10 +137,7 @@ const StyledCard = styled.div`
     font-size: 18px;
     font-weight: 700;
 
-    transition:
-      transform 0.15s ease,
-      background 0.15s ease,
-      border 0.15s ease;
+    transition: transform 0.15s ease, background 0.15s ease, border 0.15s ease;
 
     &:hover {
       transform: translateY(-1px);
@@ -213,9 +175,6 @@ const StyledSeoContainer = styled.div`
     line-height: 1.85;
     font-size: clamp(16px, 2.2vw, 20px);
     opacity: 0.98;
-
-    hyphens: auto;
-    text-wrap: pretty;
   }
 `;
 
