@@ -46,12 +46,12 @@ const StyledWelcomeWrapper = styled.section`
   position: relative;
   width: 100%;
   min-height: 100vh;
-  overflow: clip;       /* ✅ verhindert, dass der Layer in Footer “weiterläuft” */
-  isolation: isolate;   /* ✅ safer layering */
+  overflow: clip; /* ✅ verhindert, dass der Layer in Footer “weiterläuft” */
+  isolation: isolate; /* ✅ safer layering */
 
   &::before {
     content: "";
-    position: absolute;  /* ✅ war fixed */
+    position: absolute; /* ✅ war fixed */
     inset: -20px;
     z-index: 0;
     pointer-events: none;
@@ -63,14 +63,14 @@ const StyledWelcomeWrapper = styled.section`
 
   &::after {
     content: "";
-    position: absolute;  /* ✅ war fixed */
+    position: absolute; /* ✅ war fixed */
     inset: 0;
     z-index: 1;
     pointer-events: none;
 
     background: linear-gradient(
       180deg,
-      rgba(0, 0, 0, 0.70) 0%,
+      rgba(0, 0, 0, 0.7) 0%,
       rgba(0, 0, 0, 0.35) 40%,
       rgba(0, 0, 0, 0.65) 100%
     );
@@ -81,9 +81,6 @@ const StyledWelcomeWrapper = styled.section`
     z-index: 2;
   }
 `;
-
-
-
 
 // const StyledHero = styled.div`
 //   width: 100%;
@@ -143,78 +140,23 @@ const StyledWelcomeWrapper = styled.section`
 
 const StyledHero = styled.div`
   width: 100%;
-  height: 100vh;
-  height: 100svh;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
-  isolation: isolate;
 
   video {
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate3d(-50%, -50%, 0);
-
-    max-height: 100%;
-    max-width: 100%;
-
-    width: 220vw;          /* ✅ größer als vorher */
+    top: 52%;
+    transform: translate(-50%, -50%) scale(2.2);
+    width: 100vw;
+    max-width: 1100px;
     height: auto;
-
     object-fit: contain;
-    object-position: center;
-
-    display: block;
-    background: transparent;
     pointer-events: none;
     z-index: 2;
-
-    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.55));
-  }
-
-  @media (max-width: 520px) {
-    video {
-      width: 260vw;        /* ✅ Mobile stärker */
-      top: 44%;
-    }
-  }
-
-  @media (max-width: 380px) {
-    video {
-      width: 240vw;
-      top: 44%;
-    }
-  }
-
-  @media (min-width: 1100px) {
-    video {
-      width: 160vw;        /* ✅ Desktop trotzdem groß */
-    }
   }
 `;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const StyledContent = styled.div`
   padding: 60px 0 80px;
