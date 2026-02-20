@@ -33,18 +33,71 @@ import styled from "styled-components";
 
 
 
+// const StyledWelcomeWrapper = styled.section`
+//   position: relative;
+//   width: 100%;
+//   min-height: 100vh;
+//   background: url("/background/background.jpg") center / cover no-repeat;
+
+//   /* ✅ Gradient liegt wirklich über der ganzen Seite */
+//   &::before {
+//     content: "";
+//     position: fixed;
+//     inset: 0;
+//     z-index: 0;
+//     pointer-events: none;
+
+//     background: linear-gradient(
+//       180deg,
+//       rgba(0, 0, 0, 0.7) 0%,
+//       rgba(0, 0, 0, 0.35) 40%,
+//       rgba(0, 0, 0, 0.65) 100%
+//     );
+//   }
+
+//   > * {
+//     position: relative;
+//     z-index: 1;
+//   }
+
+//   /* ✅ Blur nur auf Desktop (iOS Bug umgehen) */
+//   @media (min-width: 900px) {
+//     &::before {
+//       backdrop-filter: blur(2px);
+//       -webkit-backdrop-filter: blur(2px);
+//     }
+//   }
+// `;
+
+
 const StyledWelcomeWrapper = styled.section`
   position: relative;
   width: 100%;
   min-height: 100vh;
+  overflow: hidden;
+
+  /* Hintergrund normal */
   background: url("/background/background.jpg") center / cover no-repeat;
 
-  /* ✅ Gradient liegt wirklich über der ganzen Seite */
+  /* ✅ Blur-Layer (stabil: filter blur) */
   &::before {
     content: "";
     position: fixed;
     inset: 0;
     z-index: 0;
+    pointer-events: none;
+
+    background: url("/background/background.jpg") center / cover no-repeat;
+    filter: blur(2px);
+    transform: scale(1.06);
+  }
+
+  /* ✅ Cinematic Gradient drüber */
+  &::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1;
     pointer-events: none;
 
     background: linear-gradient(
@@ -57,20 +110,9 @@ const StyledWelcomeWrapper = styled.section`
 
   > * {
     position: relative;
-    z-index: 1;
-  }
-
-  /* ✅ Blur nur auf Desktop (iOS Bug umgehen) */
-  @media (min-width: 900px) {
-    &::before {
-      backdrop-filter: blur(2px);
-      -webkit-backdrop-filter: blur(2px);
-    }
+    z-index: 2;
   }
 `;
-
-
-
 
 
 
