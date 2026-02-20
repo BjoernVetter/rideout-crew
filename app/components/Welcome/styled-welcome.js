@@ -87,7 +87,7 @@ const StyledCard = styled.div`
   }
 
   .text {
-    margin: 0 0 20px;
+    margin: 0 0 50px;
     font-size: clamp(20px, 2.2vw, 20px);
     line-height: 1.4;
     opacity: 0.92;
@@ -116,9 +116,11 @@ const StyledCard = styled.div`
     border-radius: 16px;
     text-decoration: none;
 
-    backdrop-filter: blur(5px);
-    background: rgba(255, 255, 255, 0.18);
     border: 3px solid rgb(255, 255, 255);
+
+    transform: translateY(-1px);
+    background: rgba(199, 11, 11, 0.55);
+    border-color: rgba(255, 255, 255, 0.76);
 
     color: rgba(255, 255, 255, 0.92);
     font-size: 18px;
@@ -131,7 +133,7 @@ const StyledCard = styled.div`
 
     &:hover {
       transform: translateY(-1px);
-      background: rgba(199, 11, 11, 0.31);
+      background: rgba(248, 248, 248, 0.55);
       border-color: rgb(168, 34, 34);
     }
 
