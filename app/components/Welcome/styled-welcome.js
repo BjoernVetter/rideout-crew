@@ -127,24 +127,70 @@ const StyledWelcomeWrapper = styled.section`
 
 
 
+// const StyledHero = styled.div`
+//   width: 100%;
+//   min-height: 100vh;
+//   position: relative;
+//   overflow: hidden;
+
+//   video {
+//     position: absolute;
+//     left: 50%;
+//     top: 52%;
+//     transform: translate(-50%, -50%) scale(2.2);
+//     will-change: transform;
+
+//     width: 100vw;
+//     max-width: 1600px;
+//     height: auto;
+
+//     object-fit: contain;
+//     pointer-events: none;
+//     z-index: 2;
+
+//     background: transparent;
+//     display: block;
+
+//     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.55));
+
+//     @media (max-width: 520px) {
+//       transform: translate(-50%, -50%) scale(2.5);
+//       top: 35%;
+//     }
+
+//     @media (max-width: 380px) {
+//       transform: translate(-50%, -50%) scale(2);
+//     }
+
+//     @media (min-width: 1100px) {
+//       transform: translate(-50%, -50%) scale(1.4);
+//     }
+//   }
+// `;
+
 const StyledHero = styled.div`
   width: 100%;
   min-height: 100vh;
+  min-height: 100svh; /* iOS sauber */
   position: relative;
   overflow: hidden;
 
   video {
     position: absolute;
     left: 50%;
-    top: 52%;
-    transform: translate(-50%, -50%) scale(2.2);
+    top: 50%;
+
+    /* ✅ NICHT mehr scale() */
+    transform: translate3d(-50%, -50%, 0);
     will-change: transform;
 
-    width: 100vw;
-    max-width: 1600px;
+    /* ✅ Größe über width steuern (stabil in Safari) */
+    width: clamp(900px, 160vw, 1600px);
     height: auto;
 
     object-fit: contain;
+    object-position: center;
+
     pointer-events: none;
     z-index: 2;
 
@@ -152,21 +198,45 @@ const StyledHero = styled.div`
     display: block;
 
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.55));
+  }
 
-    @media (max-width: 520px) {
-      transform: translate(-50%, -50%) scale(2.5);
-      top: 35%;
+  /* Mobile Feintuning */
+  @media (max-width: 520px) {
+    video {
+      top: 40%;
+      width: 190vw; /* größer, ohne Safari-Zoom-Bug */
     }
+  }
 
-    @media (max-width: 380px) {
-      transform: translate(-50%, -50%) scale(2);
+  @media (max-width: 380px) {
+    video {
+      width: 175vw;
     }
+  }
 
-    @media (min-width: 1100px) {
-      transform: translate(-50%, -50%) scale(1.4);
+  /* Desktop */
+  @media (min-width: 1100px) {
+    video {
+      width: clamp(900px, 120vw, 1600px);
+    }
+  }
+
+  /* ✅ iOS Safari extra Stabilität */
+  @supports (-webkit-touch-callout: none) {
+    video {
+      transform: translate3d(-50%, -50%, 0);
     }
   }
 `;
+
+
+
+
+
+
+
+
+
 
 const StyledContent = styled.div`
   padding: 60px 0 80px;
