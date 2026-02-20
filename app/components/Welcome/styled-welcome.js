@@ -5,8 +5,36 @@ const StyledWelcomeWrapper = styled.section`
   width: 100%;
   min-height: 100vh;
   background: url("/background/background.jpg") center / cover no-repeat;
-`;
 
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    backdrop-filter: blur(2px);
+
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.35) 40%,
+      rgba(0, 0, 0, 0.65) 100%
+    );
+  }
+
+  &::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+`;
 
 const StyledHero = styled.div`
   width: 100%;
@@ -14,16 +42,15 @@ const StyledHero = styled.div`
   position: relative;
   overflow: hidden;
 
-  /* Overlay nur hier */
   &::before {
     content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.55) 0%,
+      180deg
+        /* rgba(0, 0, 0, 0.55) 0%,
       rgba(0, 0, 0, 0.45) 40%,
-      rgba(0, 0, 0, 0.55) 100%
+      rgba(0, 0, 0, 0.55) 100% */
     );
     pointer-events: none;
     z-index: 1;
@@ -43,7 +70,6 @@ const StyledHero = styled.div`
     object-fit: contain;
     pointer-events: none;
 
-   
     z-index: 2;
 
     background: transparent;
@@ -70,17 +96,10 @@ const StyledContent = styled.div`
   padding: 60px 0 80px;
   position: relative;
 
- 
   &::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.35) 0%,
-      rgba(0, 0, 0, 0.2) 40%,
-      rgba(0, 0, 0, 0.35) 100%
-    );
     pointer-events: none;
     z-index: 0;
   }
