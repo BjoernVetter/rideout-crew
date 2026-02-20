@@ -79,7 +79,7 @@ const StyledCard = styled.div`
 
   .subtitle {
     margin: 14px 0 18px;
-    font-size: clamp(16px, 2.4vw, 25px);
+    font-size: clamp(20px, 2.4vw, 25px);
     letter-spacing: 3px;
     text-transform: uppercase;
     opacity: 0.92;
@@ -88,8 +88,8 @@ const StyledCard = styled.div`
 
   .text {
     margin: 0 0 20px;
-    font-size: clamp(16px, 2.2vw, 20px);
-    line-height: 1.6;
+    font-size: clamp(20px, 2.2vw, 20px);
+    line-height: 1.4;
     opacity: 0.92;
 
     strong {
@@ -154,7 +154,7 @@ const StyledSeoContainer = styled.div`
 
   h2 {
     margin: 0 0 18px;
-    font-size: clamp(22px, 3vw, 30px);
+    font-size: clamp(35px, 3vw, 30px);
     letter-spacing: 0.4px;
     text-align: center;
   }
@@ -162,8 +162,8 @@ const StyledSeoContainer = styled.div`
   p {
     max-width: 70ch;
     margin: 12px auto 0;
-    line-height: 1.85;
-    font-size: clamp(16px, 2.2vw, 20px);
+    line-height: 1.4;
+    font-size: clamp(18px, 2.2vw, 20px);
     opacity: 0.98;
   }
 `;
