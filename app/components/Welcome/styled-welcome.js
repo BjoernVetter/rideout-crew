@@ -5,7 +5,16 @@ const StyledWelcomeWrapper = styled.section`
   width: 100%;
   min-height: 100vh;
   background: url("/background/background.jpg") center / cover no-repeat;
+`;
 
+
+const StyledHero = styled.div`
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  /* Overlay nur hier */
   &::before {
     content: "";
     position: absolute;
@@ -16,22 +25,9 @@ const StyledWelcomeWrapper = styled.section`
       rgba(0, 0, 0, 0.45) 40%,
       rgba(0, 0, 0, 0.55) 100%
     );
-    backdrop-filter: blur(2px);
     pointer-events: none;
-    z-index: 0;
-  }
-
-  > * {
-    position: relative;
     z-index: 1;
   }
-`;
-
-const StyledHero = styled.div`
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
 
   video {
     position: absolute;
@@ -46,6 +42,8 @@ const StyledHero = styled.div`
 
     object-fit: contain;
     pointer-events: none;
+
+   
     z-index: 2;
 
     background: transparent;
@@ -71,6 +69,26 @@ const StyledHero = styled.div`
 const StyledContent = styled.div`
   padding: 60px 0 80px;
   position: relative;
+
+ 
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.35) 0%,
+      rgba(0, 0, 0, 0.2) 40%,
+      rgba(0, 0, 0, 0.35) 100%
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
 `;
 
 const StyledCard = styled.div`
@@ -126,8 +144,8 @@ const StyledCard = styled.div`
 
     border-radius: 16px;
     text-decoration: none;
-    backdrop-filter: blur(5px);
 
+    backdrop-filter: blur(5px);
     background: rgba(255, 255, 255, 0.18);
     border: 3px solid rgb(255, 255, 255);
 
@@ -170,7 +188,6 @@ const StyledSeoContainer = styled.div`
     text-align: center;
   }
 
-  
   p {
     max-width: 70ch;
     margin: 12px auto 0;
@@ -191,22 +208,3 @@ export {
   StyledSeoSection,
   StyledSeoContainer,
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
