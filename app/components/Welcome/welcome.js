@@ -14,11 +14,14 @@ const Welcome = () => {
   return (
     <StyledWelcomeWrapper>
       <StyledHero>
-        <video autoPlay muted loop playsInline preload="metadata">
+        <video autoPlay muted loop playsInline preload="auto">
+          {/* Safari/iOS */}
+          <source
+            src="/videos/logo-alpha-hevc.mp4"
+            type='video/mp4; codecs="hvc1"'
+          />
           {/* Chrome/Firefox */}
           <source src="/logo/logo-alpha.webm" type="video/webm" />
-          {/* Safari/iOS */}
-          <source src="/videos/logo-alpha.mov?v=2" type="video/quicktime" />
         </video>
       </StyledHero>
 
