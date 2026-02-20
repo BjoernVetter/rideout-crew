@@ -4,95 +4,23 @@ import styled from "styled-components";
 //   position: relative;
 //   width: 100%;
 //   min-height: 100vh;
-//   background: url("/background/background.jpg") center / cover no-repeat;
 
+//   /* Layer 1: Background (blurred) */
 //   &::before {
 //     content: "";
 //     position: fixed;
-//     inset: 0;
-//     z-index: 0;
-//     pointer-events: none;
-
-//     background: linear-gradient(
-//       180deg,
-//       rgba(0, 0, 0, 0.7) 0%,
-//       rgba(0, 0, 0, 0.35) 40%,
-//       rgba(0, 0, 0, 0.65) 100%
-//     );
-
-//     /* Achtung: iOS/Safari kann bei backdrop-filter zicken.
-//        Wenn wieder Probleme auftreten: diese Zeile testweise auskommentieren. */
-//     backdrop-filter: blur(2px);
-//   }
-
-//   > * {
-//     position: relative;
-//     z-index: 1;
-//   }
-// `;
-
-
-
-// const StyledWelcomeWrapper = styled.section`
-//   position: relative;
-//   width: 100%;
-//   min-height: 100vh;
-//   background: url("/background/background.jpg") center / cover no-repeat;
-
-//   /* ✅ Gradient liegt wirklich über der ganzen Seite */
-//   &::before {
-//     content: "";
-//     position: fixed;
-//     inset: 0;
-//     z-index: 0;
-//     pointer-events: none;
-
-//     background: linear-gradient(
-//       180deg,
-//       rgba(0, 0, 0, 0.7) 0%,
-//       rgba(0, 0, 0, 0.35) 40%,
-//       rgba(0, 0, 0, 0.65) 100%
-//     );
-//   }
-
-//   > * {
-//     position: relative;
-//     z-index: 1;
-//   }
-
-//   /* ✅ Blur nur auf Desktop (iOS Bug umgehen) */
-//   @media (min-width: 900px) {
-//     &::before {
-//       backdrop-filter: blur(2px);
-//       -webkit-backdrop-filter: blur(2px);
-//     }
-//   }
-// `;
-
-
-// const StyledWelcomeWrapper = styled.section`
-//   position: relative;
-//   width: 100%;
-//   min-height: 100vh;
-//   overflow: hidden;
-
-//   /* Hintergrund normal */
-//   background: url("/background/background.jpg") center / cover no-repeat;
-
-//   /* ✅ Blur-Layer (stabil: filter blur) */
-//   &::before {
-//     content: "";
-//     position: fixed;
-//     inset: 0;
+//     inset: -20px; /* damit Blur nicht an Rändern abschneidet */
 //     z-index: 0;
 //     pointer-events: none;
 
 //     background: url("/background/background.jpg") center / cover no-repeat;
+
+//     /* ✅ iOS Safari stabiler als backdrop-filter */
 //     filter: blur(2px);
-//     transform: scale(1.06);
+//     transform: scale(1.03);
 //   }
 
-//   /* ✅ Cinematic Gradient drüber */
+//   /* Layer 2: Cinematic Gradient */
 //   &::after {
 //     content: "";
 //     position: fixed;
@@ -114,75 +42,28 @@ import styled from "styled-components";
 //   }
 // `;
 
-
-
-
-
-// const StyledHero = styled.div`
-//   width: 100%;
-//   min-height: 100vh;
-//   position: relative;
-//   overflow: hidden;
-
-//   video {
-//     position: absolute;
-//     left: 50%;
-//     top: 52%;
-//     transform: translate(-50%, -50%) scale(2.2);
-//     will-change: transform;
-
-//     width: 100vw;
-//     max-width: 1600px;
-//     height: auto;
-
-//     object-fit: contain;
-//     pointer-events: none;
-//     z-index: 2;
-
-//     background: transparent;
-//     display: block;
-
-//     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.55));
-
-//     @media (max-width: 520px) {
-//       transform: translate(-50%, -50%) scale(2.5);
-//       top: 35%;
-//     }
-
-//     @media (max-width: 380px) {
-//       transform: translate(-50%, -50%) scale(2);
-//     }
-
-//     @media (min-width: 1100px) {
-//       transform: translate(-50%, -50%) scale(1.4);
-//     }
-//   }
-// `;
-
 const StyledWelcomeWrapper = styled.section`
   position: relative;
   width: 100%;
   min-height: 100vh;
+  overflow: clip;       /* ✅ verhindert, dass der Layer in Footer “weiterläuft” */
+  isolation: isolate;   /* ✅ safer layering */
 
-  /* Layer 1: Background (blurred) */
   &::before {
     content: "";
-    position: fixed;
-    inset: -20px; /* damit Blur nicht an Rändern abschneidet */
+    position: absolute;  /* ✅ war fixed */
+    inset: -20px;
     z-index: 0;
     pointer-events: none;
 
     background: url("/background/background.jpg") center / cover no-repeat;
-
-    /* ✅ iOS Safari stabiler als backdrop-filter */
     filter: blur(2px);
     transform: scale(1.03);
   }
 
-  /* Layer 2: Cinematic Gradient */
   &::after {
     content: "";
-    position: fixed;
+    position: absolute;  /* ✅ war fixed */
     inset: 0;
     z-index: 1;
     pointer-events: none;
@@ -201,13 +82,72 @@ const StyledWelcomeWrapper = styled.section`
   }
 `;
 
+
+
+
+// const StyledHero = styled.div`
+//   width: 100%;
+//   height: 100vh;
+//   height: 100svh; /* iOS safe viewport */
+//   position: relative;
+//   overflow: hidden;
+//   isolation: isolate; /* Safari Compositing stabiler */
+
+//   video {
+//     position: absolute;
+//     left: 50%;
+//     top: 50%;
+//     transform: translate3d(-50%, -50%, 0);
+
+//     /* ✅ Wichtig: verhindert Überlauf nach unten */
+//     max-height: 100%;
+//     max-width: 100%;
+
+//     /* Größe: groß, aber bleibt im Hero */
+//     width: 160vw;
+//     height: auto;
+
+//     object-fit: contain;
+//     object-position: center;
+
+//     display: block;
+//     background: transparent;
+
+//     pointer-events: none;
+//     z-index: 2;
+
+//     /* Drop shadow ok */
+//     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.55));
+//   }
+
+//   @media (max-width: 520px) {
+//     video {
+//       width: 200vw;
+//       top: 42%;
+//     }
+//   }
+
+//   @media (max-width: 380px) {
+//     video {
+//       width: 180vw;
+//       top: 42%;
+//     }
+//   }
+
+//   @media (min-width: 1100px) {
+//     video {
+//       width: 120vw;
+//     }
+//   }
+// `;
+
 const StyledHero = styled.div`
   width: 100%;
   height: 100vh;
-  height: 100svh; /* iOS safe viewport */
+  height: 100svh;
   position: relative;
   overflow: hidden;
-  isolation: isolate; /* Safari Compositing stabiler */
+  isolation: isolate;
 
   video {
     position: absolute;
@@ -215,12 +155,10 @@ const StyledHero = styled.div`
     top: 50%;
     transform: translate3d(-50%, -50%, 0);
 
-    /* ✅ Wichtig: verhindert Überlauf nach unten */
     max-height: 100%;
     max-width: 100%;
 
-    /* Größe: groß, aber bleibt im Hero */
-    width: 160vw;
+    width: 220vw;          /* ✅ größer als vorher */
     height: auto;
 
     object-fit: contain;
@@ -228,34 +166,43 @@ const StyledHero = styled.div`
 
     display: block;
     background: transparent;
-
     pointer-events: none;
     z-index: 2;
 
-    /* Drop shadow ok */
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.55));
   }
 
   @media (max-width: 520px) {
     video {
-      width: 200vw;
-      top: 42%;
+      width: 260vw;        /* ✅ Mobile stärker */
+      top: 44%;
     }
   }
 
   @media (max-width: 380px) {
     video {
-      width: 180vw;
-      top: 42%;
+      width: 240vw;
+      top: 44%;
     }
   }
 
   @media (min-width: 1100px) {
     video {
-      width: 120vw;
+      width: 160vw;        /* ✅ Desktop trotzdem groß */
     }
   }
 `;
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -334,7 +281,10 @@ const StyledCard = styled.div`
     font-size: 18px;
     font-weight: 700;
 
-    transition: transform 0.15s ease, background 0.15s ease, border 0.15s ease;
+    transition:
+      transform 0.15s ease,
+      background 0.15s ease,
+      border 0.15s ease;
 
     &:hover {
       transform: translateY(-1px);
