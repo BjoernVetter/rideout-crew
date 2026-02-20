@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 import {
   StyledWelcomeWrapper,
@@ -11,24 +12,36 @@ import {
 } from "./styled-welcome";
 
 const Welcome = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 768px)");
+    const update = () => setIsMobile(mq.matches);
+
+    update(); // initial
+    mq.addEventListener("change", update);
+
+    return () => mq.removeEventListener("change", update);
+  }, []);
+
   return (
     <StyledWelcomeWrapper>
-      const isMobile = typeof window !== "undefined" &&
-      window.matchMedia("(max-width: 768px)").matches; return (
       <StyledHero>
         {isMobile ? (
           <img src="/logo/logo-alpha.png" alt="RideOut Logo" />
         ) : (
           <video autoPlay muted loop playsInline preload="auto">
+            {/* Safari/iOS (HEVC with alpha) */}
             <source
               src="/videos/logo-alpha-hevc.mp4"
               type='video/mp4; codecs="hvc1"'
             />
+            {/* Chrome/Firefox */}
             <source src="/logo/logo-alpha.webm" type="video/webm" />
           </video>
         )}
       </StyledHero>
-      );
+
       <StyledContent>
         <StyledCard>
           <h1>Willkommen bei der RideOut Crew</h1>
