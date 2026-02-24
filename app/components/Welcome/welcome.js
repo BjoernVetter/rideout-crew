@@ -35,7 +35,7 @@ const Welcome = () => {
 
       <StyledContent>
         <StyledCard>
-          <h1>Willkommen bei der RideOut Crew</h1>
+          <h1>Willkommen bei RideOut</h1>
 
           <p className="subtitle">BIKER COMMUNITY • DÜSSELDORF & UMGEBUNG</p>
 
@@ -70,7 +70,8 @@ const Welcome = () => {
 
             <a
               className="socialLink"
-              href="https://chat.whatsapp.com/Dw69aPOJGTkG1aFSFpFDCN"
+              href="https://chat.whatsapp.com/K1MEvQPN2FI92nE8XXFc8w"
+              
               target="_blank"
               rel="noreferrer"
               aria-label="WhatsApp"
@@ -95,7 +96,7 @@ const Welcome = () => {
             <p>
               Unsere Touren starten überwiegend im Raum Düsseldorf. Ob spontane
               Feierabendrunde, Wochenend-Ausfahrt oder gemeinsame Treffen – bei
-              uns steht das Motorradfahren in Düsseldorf im Mittelpunkt.
+              uns steht das Motorradfahren in und Düsseldorf im Mittelpunkt.
             </p>
 
             <p>
