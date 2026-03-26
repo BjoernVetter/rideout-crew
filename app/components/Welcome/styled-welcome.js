@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 const StyledWelcomeWrapper = styled.section`
   position: relative;
   width: 100%;
@@ -8,7 +9,7 @@ const StyledWelcomeWrapper = styled.section`
 
   &::before {
     content: "";
-    position: absolute; /* ✅ war fixed */
+    position: absolute;
     inset: -20px;
     z-index: 0;
     pointer-events: none;
@@ -27,8 +28,8 @@ const StyledWelcomeWrapper = styled.section`
 
     background: linear-gradient(
       180deg,
-      rgba(0, 0, 0, 0.7) 0%,
-      rgba(0, 0, 0, 0.35) 40%,
+      rgba(0, 0, 0, 0.94) 0%,
+      rgba(0, 0, 0, 0.35) 20%,
       rgba(0, 0, 0, 0.65) 100%
     );
   }
@@ -72,14 +73,14 @@ const StyledCard = styled.div`
 
   h1 {
     margin: 0;
-    font-size: clamp(40px, 4vw, 50px);
+    font-size: clamp(36px, 4.5vw, 52px);
     line-height: 1.1;
     letter-spacing: 0.4px;
   }
 
   .subtitle {
     margin: 14px 0 18px;
-    font-size: clamp(20px, 2.4vw, 25px);
+    font-size: clamp(13px, 1.8vw, 17px);
     letter-spacing: 3px;
     text-transform: uppercase;
     opacity: 0.92;
@@ -88,8 +89,8 @@ const StyledCard = styled.div`
 
   .text {
     margin: 0 0 50px;
-    font-size: clamp(20px, 2.2vw, 20px);
-    line-height: 1.4;
+    font-size: clamp(15px, 1.6vw, 18px);
+    line-height: 1.6;
     opacity: 0.92;
 
     strong {
@@ -108,9 +109,9 @@ const StyledCard = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 18px;
 
-    width: min(520px, 80%);
+    width: min(220px, 80%);
     padding: 14px 16px;
 
     border-radius: 16px;
@@ -123,7 +124,7 @@ const StyledCard = styled.div`
     border-color: rgba(255, 255, 255, 0.76);
 
     color: rgba(255, 255, 255, 0.92);
-    font-size: 18px;
+    font-size: clamp(14px, 1.5vw, 17px);
     font-weight: 700;
 
     transition:
@@ -132,7 +133,7 @@ const StyledCard = styled.div`
       border 0.15s ease;
 
     &:hover {
-      transform: translateY(-1px);
+      transform: translateY(-1px) scale(1.08);
       background: rgba(248, 248, 248, 0.55);
       border-color: rgb(168, 34, 34);
     }
@@ -156,7 +157,7 @@ const StyledSeoContainer = styled.div`
 
   h2 {
     margin: 0 0 18px;
-    font-size: clamp(35px, 3vw, 30px);
+    font-size: clamp(26px, 3vw, 36px);
     letter-spacing: 0.4px;
     text-align: center;
   }
@@ -164,9 +165,11 @@ const StyledSeoContainer = styled.div`
   p {
     max-width: 70ch;
     margin: 12px auto 0;
-    line-height: 1.4;
-    font-size: clamp(18px, 2.2vw, 20px);
+    line-height: 1.6;
+    font-size: clamp(15px, 1.6vw, 18px);
     opacity: 0.98;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 `;
 

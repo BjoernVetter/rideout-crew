@@ -1,9 +1,13 @@
 /* =========================================
-   ROOT COLORS
+   ROOT COLORS & FONTS
 ========================================= */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --font-fallback: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-body: "Poppins", var(--font-fallback);
+  --font-heading: "Montserrat", var(--font-fallback);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,11 +17,10 @@
   }
 }
 
-/* =========================================
-   LOCAL FONTS (aus /public/fonts)
-========================================= */
 
-/* Poppins Regular – Standard Text */
+/* =========================================
+   FONTS
+========================================= */
 @font-face {
   font-family: "Poppins";
   src: url("/fonts/Poppins-Regular.woff2") format("woff2");
@@ -26,7 +29,6 @@
   font-display: swap;
 }
 
-/* Poppins SemiBold – Buttons / Hervorhebungen */
 @font-face {
   font-family: "Poppins";
   src: url("/fonts/Poppins-SemiBold.woff2") format("woff2");
@@ -35,7 +37,6 @@
   font-display: swap;
 }
 
-/* Montserrat – Headlines */
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-Medium.woff2") format("woff2");
@@ -44,8 +45,9 @@
   font-display: swap;
 }
 
+
 /* =========================================
-   BASE RESET
+   RESET & BASE
 ========================================= */
 * {
   box-sizing: border-box;
@@ -60,9 +62,6 @@ body {
   scroll-behavior: smooth;
 }
 
-/* =========================================
-   BODY
-========================================= */
 body {
   min-height: 100vh;
   display: flex;
@@ -71,8 +70,7 @@ body {
   color: var(--foreground);
   background: var(--background);
 
-  /* Standard Text = Poppins Regular */
-  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
 
   -webkit-font-smoothing: antialiased;
@@ -80,16 +78,18 @@ body {
 }
 
 
+/* =========================================
+   TYPOGRAFIE
+========================================= */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: var(--font-heading);
   font-weight: 500;
 }
-
 
 p,
 li,
@@ -98,7 +98,16 @@ a {
   font-weight: 400;
 }
 
+.text-content {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  text-align: center;
+}
 
+
+/* =========================================
+   LAYOUT
+========================================= */
 section {
   padding: 50px 0;
 }
@@ -110,16 +119,14 @@ section {
   padding: 0 30px !important;
 }
 
-.fade-wrapper {
-  background-color: #ff5f1f;
-  min-height: 100vh;
-}
-
-/* Footer bleibt unten */
 footer {
   margin-top: auto;
 }
 
+
+/* =========================================
+   NAVIGATION
+========================================= */
 nav ul li {
   list-style: none;
 }
@@ -130,24 +137,16 @@ a {
 }
 
 
-.text-content {
-  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-
-
-
+/* =========================================
+   GLOBALER HINTERGRUND
+   (nur hier definiert – nicht in Komponenten wiederholen!)
+========================================= */
 .site-bg {
   position: fixed;
   inset: 0;
   z-index: -1;
 
-  background: url("/background/background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("/background/background.jpg") center / cover no-repeat;
 }
 
 .site-bg::after {
@@ -155,11 +154,8 @@ a {
   position: absolute;
   inset: 0;
 
-  /* edler dunkler Verlauf */
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.55) 0%,
-    rgba(0, 0, 0, 0.65) 40%,
-    rgba(0, 0, 0, 0.75) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.65) 40%,
+      rgba(0, 0, 0, 0.75) 100%);
 }
