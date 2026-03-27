@@ -49,7 +49,7 @@ const StyledHero = styled.div`
   video {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 38%;
     transform: translate(-50%, -50%) scale(2.2);
     width: 100vw;
     max-width: 1100px;
@@ -57,6 +57,14 @@ const StyledHero = styled.div`
     object-fit: contain;
     pointer-events: none;
     z-index: 2;
+  }
+
+  @media screen and (max-width: 950px) and (orientation: landscape) {
+    video {
+      top: 42%;
+      transform: translate(-50%, -50%) scale(1.55);
+      max-width: 780px;
+    }
   }
 `;
 
@@ -94,7 +102,7 @@ const StyledCard = styled.div`
     font-size: clamp(15px, 1.6vw, 18px);
     line-height: 1.6;
     opacity: 0.92;
-     color: rgba(255, 255, 255, 0.92);
+    color: rgba(255, 255, 255, 0.92);
 
     strong {
       font-weight: 800;
