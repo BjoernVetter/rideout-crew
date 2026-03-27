@@ -49,7 +49,7 @@ const StyledHero = styled.div`
   video {
     position: absolute;
     left: 50%;
-    top: 38%;
+    top: 50%;
     transform: translate(-50%, -50%) scale(2.2);
     width: 100vw;
     max-width: 1100px;
@@ -76,6 +76,7 @@ const StyledCard = styled.div`
     font-size: clamp(36px, 4.5vw, 52px);
     line-height: 1.1;
     letter-spacing: 0.4px;
+    color: rgba(255, 255, 255, 0.96);
   }
 
   .subtitle {
@@ -85,6 +86,7 @@ const StyledCard = styled.div`
     text-transform: uppercase;
     opacity: 0.92;
     font-weight: 600;
+    color: rgba(255, 255, 255, 0.92);
   }
 
   .text {
@@ -92,9 +94,11 @@ const StyledCard = styled.div`
     font-size: clamp(15px, 1.6vw, 18px);
     line-height: 1.6;
     opacity: 0.92;
+     color: rgba(255, 255, 255, 0.92);
 
     strong {
       font-weight: 800;
+      color: rgba(255, 255, 255, 0.98);
     }
   }
 

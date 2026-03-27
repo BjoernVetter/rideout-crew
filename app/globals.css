@@ -2,20 +2,20 @@
    ROOT COLORS & FONTS
 ========================================= */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
 
   --font-fallback: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   --font-body: "Poppins", var(--font-fallback);
   --font-heading: "Montserrat", var(--font-fallback);
 }
-
-@media (prefers-color-scheme: dark) {
+/* bringt probleme bei facebook */
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 
 /* =========================================
@@ -60,6 +60,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 body {

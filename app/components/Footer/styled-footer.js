@@ -4,7 +4,7 @@ import styled from "styled-components";
 const StyledFooter = styled.footer`
   background-color: rgba(255, 255, 255, 0.06);
   padding: 20px 0;
-  
+  color: rgba(255, 255, 255, 0.92);
 
   .footer-content {
     display: flex;
@@ -22,11 +22,12 @@ const StyledFooter = styled.footer`
         gap: 10px;
 
         a {
+          color: rgba(255, 255, 255, 0.92);
           transition: all 0.3s ease;
           font-size: 18px;
           display: block;
           &:hover {
-            color: rgb(168, 34, 34);;
+            color: rgb(168, 34, 34);
             scale: 1.1;
           }
         }
