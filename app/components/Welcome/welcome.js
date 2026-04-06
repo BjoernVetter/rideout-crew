@@ -40,7 +40,7 @@ const Welcome = () => {
           <p className="subtitle">BIKER COMMUNITY • DÜSSELDORF & UMGEBUNG</p>
 
           <p className="text">
-            Motorradgruppe aus Düsseldorf – offen für alle Bikes & Fahrstile.
+            Motorradgruppe aus Düsseldorf - offen für alle Bikes & Fahrstile.
             <br />
             <strong>Unser Fokus:</strong> gemeinsame Ausfahrten und gute Leute.
           </p>

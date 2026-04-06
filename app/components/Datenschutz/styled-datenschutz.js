@@ -5,26 +5,39 @@ const StyledDatenschutzSection = styled.section`
   min-height: 100vh;
   width: 100%;
   position: relative;
-
-  background: url("/background/background.jpg") center / cover no-repeat;
+  overflow: clip;
+  isolation: isolate;
 
   &::before {
     content: "";
     position: absolute;
+    inset: -20px;
+    z-index: 0;
+    pointer-events: none;
+
+    background: url("/background/background.jpg") center / cover no-repeat;
+    filter: blur(2px);
+    transform: scale(1.03);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
     inset: 0;
+    z-index: 1;
+    pointer-events: none;
+
     background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.65) 0%,
       rgba(0, 0, 0, 0.55) 50%,
       rgba(0, 0, 0, 0.65) 100%
     );
-    pointer-events: none;
-    z-index: 0;
   }
 
   > * {
     position: relative;
-    z-index: 1;
+    z-index: 2;
   }
 `;
 
@@ -38,10 +51,8 @@ const StyledDatenschutzContainer = styled.div`
 const StyledDatenschutzContent = styled.div`
   width: min(900px, 95vw);
   padding: 0;
-
   color: rgba(255, 255, 255, 0.92);
 
-  /* Typo */
   h1 {
     margin: 0 0 26px;
     font-size: clamp(28px, 4vw, 44px);
@@ -60,15 +71,14 @@ const StyledDatenschutzContent = styled.div`
   p {
     margin: 0;
     margin-top: 10px;
-    max-width: 70ch;         
+    max-width: 70ch;
     font-size: clamp(16px, 2vw, 18px);
     opacity: 0.97;
+    line-height: 1.8;
 
     hyphens: auto;
-    text-wrap: pretty;
   }
 
- 
   p + h2 {
     margin-top: 32px;
   }

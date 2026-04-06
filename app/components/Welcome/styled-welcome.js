@@ -34,7 +34,7 @@ const StyledWelcomeWrapper = styled.section`
     );
   }
 
-  > * {
+  * {
     position: relative;
     z-index: 2;
   }
@@ -175,13 +175,14 @@ const StyledSeoContainer = styled.div`
   }
 
   p {
-    max-width: 70ch;
-    margin: 12px auto 0;
-    line-height: 1.6;
-    font-size: clamp(15px, 1.6vw, 18px);
+    max-width: 52ch;
+    margin: 0 auto 28px;
+    line-height: 1.85;
+    font-size: clamp(16px, 1.6vw, 20px);
     opacity: 0.98;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    text-align: center;
+
+    hyphens: auto;
   }
 `;
 
