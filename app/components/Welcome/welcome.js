@@ -95,12 +95,12 @@ const Welcome = () => {
 
             <p>
               Unsere Touren starten überwiegend im Raum Düsseldorf. Ob spontane
-              Feierabendrunde, Wochenend-Ausfahrt oder gemeinsame Treffen – bei
+              Feierabendrunde, Wochenend-Ausfahrt oder gemeinsame Treffen bei
               uns steht das Motorradfahren in und Düsseldorf im Mittelpunkt.
             </p>
 
             <p>
-              Egal ob 125er, Naked Bike, Supersportler, Chopper oder Tourer –
+              Egal ob 125er, Naked Bike, Supersportler, Chopper oder Tourer 
               jede Maschine und jeder Fahrstil ist willkommen. Wichtig ist die
               Freude am Fahren und eine entspannte, respektvolle Community.
             </p>
