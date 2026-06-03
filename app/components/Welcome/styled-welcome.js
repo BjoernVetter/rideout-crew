@@ -72,7 +72,7 @@ const StyledHero = styled.div`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: clamp(320px, 68vw, 850px);
+    width: clamp(300px, 55vw, 760px);
     height: auto;
     object-fit: contain;
     pointer-events: none;
