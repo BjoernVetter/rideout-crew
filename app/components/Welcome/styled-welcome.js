@@ -72,7 +72,7 @@ const StyledHero = styled.div`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) scale(2.2);
-    width: 20vw;
+    width: 30vw;
     max-width: 500px;
     height: auto;
     object-fit: contain;
@@ -81,8 +81,8 @@ const StyledHero = styled.div`
 
     @media screen and (max-width: 950px) and (orientation: landscape) {
       img {
-        top: 42%;
-        transform: translate(-50%, -50%) scale(1.55);
+        top: 40%;
+        transform: translate(-50%, -50%) scale(2.2);
         max-width: 280px;
       }
     }
