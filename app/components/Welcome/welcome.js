@@ -9,6 +9,8 @@ import {
   StyledCard,
   StyledSeoSection,
   StyledSeoContainer,
+  StyledVideoSection,
+  StyledVideoContainer,
 } from "./styled-welcome";
 
 const Welcome = () => {
@@ -27,10 +29,13 @@ const Welcome = () => {
   return (
     <StyledWelcomeWrapper>
       <StyledHero>
-        <video autoPlay muted loop playsInline preload="metadata">
+        {/* <img src="/logo/logo2.svg" alt="RideOut Crew Logo" /> */}
+        <img src="/logo/logo3.svg" alt="RideOut Crew Logo" />
+
+        {/* <video autoPlay muted loop playsInline preload="metadata">
           <source src="/videos/logo-alpha.mov" type="video/quicktime" />
           <source src="/logo/logo-alpha.webm" type="video/webm" />
-        </video>
+        </video> */}
       </StyledHero>
 
       <StyledContent>
@@ -71,7 +76,6 @@ const Welcome = () => {
             <a
               className="socialLink"
               href="https://chat.whatsapp.com/K1MEvQPN2FI92nE8XXFc8w"
-              
               target="_blank"
               rel="noreferrer"
               aria-label="WhatsApp"
@@ -87,31 +91,54 @@ const Welcome = () => {
             <h2>Motorradgruppe Düsseldorf</h2>
 
             <p>
-              Die RideOut Crew ist eine Motorradgruppe aus Düsseldorf für
-              Motorradfahrerinnen und Motorradfahrer aus Düsseldorf und
-              Umgebung. Wir verbinden Menschen, die die Leidenschaft für
-              Motorräder teilen und gemeinsam unterwegs sein möchten.
+              Die RideOut Crew ist eine lockere Motorrad-Community aus
+              Düsseldorf für Motorradfahrerinnen und Motorradfahrer aus
+              Düsseldorf und Umgebung. Bei uns steht der Spaß am gemeinsamen
+              Fahren im Vordergrund. Wir sind kein Motorradclub, kein Verein und
+              verfolgen keine clubähnlichen Strukturen.
             </p>
 
             <p>
-              Unsere Touren starten überwiegend im Raum Düsseldorf. Ob spontane
-              Feierabendrunde, Wochenend-Ausfahrt oder gemeinsame Treffen bei
-              uns steht das Motorradfahren in und Düsseldorf im Mittelpunkt.
+              Unsere Community richtet sich an alle, die gerne gemeinsam
+              unterwegs sind, neue Leute kennenlernen möchten und Lust auf
+              entspannte Ausfahrten haben. Ob spontane Feierabendrunde,
+              Wochenendtour oder gemeinsames Treffen im Raum Düsseldorf: Bei uns
+              geht es um das Hobby Motorradfahren und um eine respektvolle
+              Gemeinschaft auf Augenhöhe.
             </p>
 
             <p>
-              Egal ob 125er, Naked Bike, Supersportler, Chopper oder Tourer 
-              jede Maschine und jeder Fahrstil ist willkommen. Wichtig ist die
-              Freude am Fahren und eine entspannte, respektvolle Community.
+              Egal ob 125er, Naked Bike, Supersportler, Chopper, Tourer oder
+              Cruiser: Jede Maschine und jeder Fahrstil ist willkommen. Wichtig
+              sind gegenseitiger Respekt, ein entspannter Umgang miteinander und
+              die Freude am Fahren.
             </p>
 
             <p>
-              Wenn du eine aktive Motorradgruppe in Düsseldorf suchst, neue
-              Leute kennenlernen möchtest und Lust auf gemeinsame Ausfahrten in
-              der Region hast, dann bist du bei der RideOut Crew genau richtig.
+              Die RideOut Crew versteht sich ausdrücklich nicht als Motorradclub
+              und distanziert sich von MC-Strukturen, Abzeichen, Rangordnungen
+              oder vereinsähnlichen Verpflichtungen. Jeder kann sich einbringen,
+              gemeinsame Fahrten vorschlagen oder einfach mitfahren, wenn es
+              zeitlich passt.
+            </p>
+
+            <p>
+              Wenn du eine lockere Motorradgruppe in Düsseldorf suchst, bei der
+              es einfach um gemeinsame Ausfahrten, gute Gespräche und Spaß am
+              Motorrad geht, dann bist du bei der RideOut Crew genau richtig.
             </p>
           </StyledSeoContainer>
         </StyledSeoSection>
+
+        <StyledVideoSection>
+          <StyledVideoContainer>
+            <h2>Das sind wir</h2>
+
+            <video autoPlay muted loop playsInline controls preload="metadata">
+              <source src="/videos/rideoutvideo.mp4" type="video/mp4" />
+            </video>
+          </StyledVideoContainer>
+        </StyledVideoSection>
       </StyledContent>
     </StyledWelcomeWrapper>
   );

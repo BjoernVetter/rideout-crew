@@ -46,7 +46,8 @@ const StyledHero = styled.div`
   position: relative;
   overflow: hidden;
 
-  video {
+  /* wenn ich das animierte Logo auf meiner Seite haben möchte. */
+  /* video {
     position: absolute;
     left: 50%;
     top: 38%;
@@ -57,13 +58,33 @@ const StyledHero = styled.div`
     object-fit: contain;
     pointer-events: none;
     z-index: 2;
-  }
 
-  @media screen and (max-width: 950px) and (orientation: landscape) {
-    video {
-      top: 42%;
-      transform: translate(-50%, -50%) scale(1.55);
-      max-width: 780px;
+    @media screen and (max-width: 950px) and (orientation: landscape) {
+      video {
+        top: 42%;
+        transform: translate(-50%, -50%) scale(1.55);
+        max-width: 780px;
+      }
+    }
+  } */
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(2.2);
+    width: 20vw;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 2;
+
+    @media screen and (max-width: 950px) and (orientation: landscape) {
+      img {
+        top: 42%;
+        transform: translate(-50%, -50%) scale(1.55);
+        max-width: 280px;
+      }
     }
   }
 `;
@@ -81,7 +102,7 @@ const StyledCard = styled.div`
 
   h1 {
     margin: 0;
-    font-size: clamp(36px, 4.5vw, 52px);
+    font-size: clamp(36px, 5vw, 65px);
     line-height: 1.1;
     letter-spacing: 0.4px;
     color: rgba(255, 255, 255, 0.96);
@@ -93,7 +114,7 @@ const StyledCard = styled.div`
     letter-spacing: 3px;
     text-transform: uppercase;
     opacity: 0.92;
-    font-weight: 600;
+    font-weight: bold;
     color: rgba(255, 255, 255, 0.92);
   }
 
@@ -169,7 +190,7 @@ const StyledSeoContainer = styled.div`
 
   h2 {
     margin: 0 0 18px;
-    font-size: clamp(26px, 3vw, 36px);
+    font-size: clamp(26px, 3.5vw, 50px);
     letter-spacing: 0.4px;
     text-align: center;
   }
@@ -185,6 +206,30 @@ const StyledSeoContainer = styled.div`
     hyphens: auto;
   }
 `;
+const StyledVideoSection = styled.section`
+  width: 100%;
+  padding: 4rem 1.5rem;
+`;
+
+const StyledVideoContainer = styled.div`
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: clamp(26px, 3.5vw, 50px);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    border: 3px solid rgb(255, 255, 255);
+  }
+`;
 
 export {
   StyledWelcomeWrapper,
@@ -193,4 +238,6 @@ export {
   StyledCard,
   StyledSeoSection,
   StyledSeoContainer,
+  StyledVideoSection,
+  StyledVideoContainer,
 };
