@@ -71,20 +71,18 @@ const StyledHero = styled.div`
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%) scale(2.2);
-    width: 30vw;
-    max-width: 500px;
+    transform: translate(-50%, -50%);
+    width: clamp(320px, 68vw, 850px);
     height: auto;
     object-fit: contain;
     pointer-events: none;
     z-index: 2;
+  }
 
-    @media screen and (max-width: 950px) and (orientation: landscape) {
-      img {
-        top: 40%;
-        transform: translate(-50%, -50%) scale(2.2);
-        max-width: 280px;
-      }
+  @media screen and (max-width: 768px) {
+    img {
+      top: 52%;
+      width: clamp(240px, 75vw, 420px);
     }
   }
 `;
