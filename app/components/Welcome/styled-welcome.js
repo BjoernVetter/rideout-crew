@@ -104,7 +104,7 @@ const StyledCard = styled.div`
     line-height: 1.1;
     letter-spacing: 0.4px;
     color: rgba(255, 255, 255, 0.96);
-    font-weight: 700;
+    font-weight: 900;
   }
 
   .subtitle {
@@ -123,7 +123,7 @@ const StyledCard = styled.div`
     line-height: 1.6;
     opacity: 0.92;
     color: rgba(255, 255, 255, 0.92);
-    font-weight: 300;
+    font-weight: 500;
 
     strong {
       font-weight: 800;

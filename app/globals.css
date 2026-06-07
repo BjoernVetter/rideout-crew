@@ -6,8 +6,8 @@
   --foreground: #ededed;
 
   --font-fallback: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  --font-body: "Poppins", var(--font-fallback);
-  --font-heading: "Montserrat", var(--font-fallback);
+  --font-body: "Museo", var(--font-fallback);
+  --font-heading: "Museo", var(--font-fallback);
 }
 
 /* bringt probleme bei facebook */
@@ -22,8 +22,21 @@
 /* =========================================
    FONTS
 ========================================= */
+
+
+
+
 @font-face {
-  font-family: "Poppins";
+  font-family: "Museo";
+  src: url("/fonts/Museo-300.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Museo";
   src: url("/fonts/Museo-500.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
@@ -31,20 +44,23 @@
 }
 
 @font-face {
-  font-family: "Poppins";
+  font-family: "Museo";
   src: url("/fonts/Museo-700.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
+
+
 @font-face {
-  font-family: "Montserrat";
-  src: url("/fonts/Museo-300.woff2") format("woff2");
-  font-weight: 300;
+  font-family: "Museo";
+  src: url("/fonts/Museo-900.woff2") format("woff2");
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
+
 
 
 /* =========================================
