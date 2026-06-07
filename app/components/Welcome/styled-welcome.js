@@ -104,6 +104,7 @@ const StyledCard = styled.div`
     line-height: 1.1;
     letter-spacing: 0.4px;
     color: rgba(255, 255, 255, 0.96);
+    font-weight: 700;
   }
 
   .subtitle {
@@ -112,7 +113,7 @@ const StyledCard = styled.div`
     letter-spacing: 3px;
     text-transform: uppercase;
     opacity: 0.92;
-    font-weight: bold;
+    font-weight: 700;
     color: rgba(255, 255, 255, 0.92);
   }
 
@@ -122,6 +123,7 @@ const StyledCard = styled.div`
     line-height: 1.6;
     opacity: 0.92;
     color: rgba(255, 255, 255, 0.92);
+    font-weight: 300;
 
     strong {
       font-weight: 800;
@@ -156,7 +158,7 @@ const StyledCard = styled.div`
 
     color: rgba(255, 255, 255, 0.92);
     font-size: clamp(14px, 1.5vw, 17px);
-    font-weight: 700;
+    font-weight: 500;
 
     transition:
       transform 0.15s ease,
@@ -191,6 +193,7 @@ const StyledSeoContainer = styled.div`
     font-size: clamp(26px, 3.5vw, 50px);
     letter-spacing: 0.4px;
     text-align: center;
+    font-weight: 700;
   }
 
   p {
@@ -218,6 +221,7 @@ const StyledVideoContainer = styled.div`
     font-size: clamp(26px, 3.5vw, 50px);
     margin-bottom: 1.5rem;
     text-align: center;
+    font-weight: 700;
   }
 
   video {

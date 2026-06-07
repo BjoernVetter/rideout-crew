@@ -9,6 +9,7 @@
   --font-body: "Poppins", var(--font-fallback);
   --font-heading: "Montserrat", var(--font-fallback);
 }
+
 /* bringt probleme bei facebook */
 /* @media (prefers-color-scheme: dark) {
   :root {
@@ -23,24 +24,24 @@
 ========================================= */
 @font-face {
   font-family: "Poppins";
-  src: url("/fonts/Poppins-Regular.woff2") format("woff2");
-  font-weight: 400;
+  src: url("/fonts/Museo-500.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Poppins";
-  src: url("/fonts/Poppins-SemiBold.woff2") format("woff2");
-  font-weight: 600;
+  src: url("/fonts/Museo-700.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Montserrat";
-  src: url("/fonts/Montserrat-Medium.woff2") format("woff2");
-  font-weight: 500;
+  src: url("/fonts/Museo-300.woff2") format("woff2");
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
